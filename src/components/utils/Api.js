@@ -1,0 +1,26 @@
+import { useState, useEffect } from "react";
+
+function useApi(url) {
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    setIsLoading(true);
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setIsLoading(false);
+        setData(data);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        setError(error);
+      });
+  }, [url]);
+
+  return { data, isLoading, error };
+}
+
+export default useApi;
