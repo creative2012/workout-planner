@@ -1,0 +1,40 @@
+
+#headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: rgb(59, 59, 59);
+    padding: 0 15px;
+    color: white;
+    white-space: nowrap;
+    
+}
+
+#userImage {
+    height: 45px;
+    width: 45px;
+    border-radius: 5rem;
+    background-color: white;
+}
+
+#headerContainer p {
+    margin: 0 10px;
+    
+}
+
+.headerInnerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.headerInnerContainer ul{
+    list-style: none;
+    
+}
+.headerInnerContainer ul li{
+    display: inline;
+    margin-left: 20px;
+    
+}
