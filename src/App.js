@@ -8,7 +8,7 @@ function App() {
  
   const profile = {
     
-      name: 'Create new Profile'
+      name: ''
     
   }
    //check if user account already created
