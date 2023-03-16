@@ -1,17 +1,25 @@
-import axios from "axios";
-import { useEffect } from "react";
 
-function useAPI() {
+
+import { useState, useEffect } from "react";
+
+function useApi(url, options) {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   useEffect(() => {
-    axios
-      .get('https://api.api-ninjas.com/v1/exercises', {
-        headers:{ 'x-api-key': 'UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2'},
-        params: {muscle: 'biceps'}
-              })
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
-  }, []);
-
+    setIsLoading(true);
+     fetch(url, options)
+      .then((response) => response.json())
+      .then((data) => {
+        setIsLoading(false);
+        setData(data);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        setError(error);
+      });
+  }, [url]);
+  return { data, isLoading, error };
 }
+export default useApi;
 
-export default useAPI
