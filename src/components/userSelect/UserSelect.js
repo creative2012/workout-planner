@@ -12,8 +12,11 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 
 const UserSelect = (props) => {
+    //get the value for the text input field
     const textInput = createRef();
+    //model state
     const [open, setOpen] = useState(false);
+    //check if there is a user profile already
     const test = getFromLocalStorage('user')
     const handleClickOpen = () => {
         setOpen(true);
@@ -22,16 +25,15 @@ const UserSelect = (props) => {
     const handleClose = () => {
         setOpen(false);
     };
+    //handle userlogin if user profile does not exist
     const userLogin = () => {
         props.handleLogin(textInput.current.value)
     }
+    //handle login if user profile exists
     const login = () => {
         const name = getFromLocalStorage('user').name
         props.handleLogin(name)
     }
-
-   
-
 
     return (
         <div id="splashBg" >
