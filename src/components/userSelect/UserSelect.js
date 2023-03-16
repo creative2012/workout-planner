@@ -27,7 +27,12 @@ const UserSelect = (props) => {
     };
     //handle userlogin if user profile does not exist
     const userLogin = () => {
-        props.handleLogin(textInput.current.value)
+        let loginName = textInput.current.value;
+        //check user name is longer than 3 chars
+        if(loginName.length >= 3){
+            props.handleLogin(textInput.current.value)
+        }
+
     }
     //handle login if user profile exists
     const login = () => {
@@ -44,6 +49,7 @@ const UserSelect = (props) => {
                         To Begin using our website, please enter your Name below. 
                     </DialogContentText>
                     <TextField
+                        required= {true}
                         inputRef={textInput}
                         autoFocus
                         margin="dense"
