@@ -18,7 +18,7 @@ function useApi(url, options) {
         setIsLoading(false);
         setError(error);
       });
-  }, [url]);
+  }, []);
   return { data, isLoading, error };
 }
 export default useApi;

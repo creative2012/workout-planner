@@ -3,7 +3,8 @@ import './search.css';
 import useApi from "../utils/Api.js";
 
 function Search() {
-    const [muscle, setSearchMuscle] = useState("biceps");
+    /*const [muscle, setSearchMuscle] = useState("biceps");*/
+    const [muscle] = useState("biceps");
     const options = {
     headers:{ 'x-api-key': 'UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2'}
     };
