@@ -1,7 +1,7 @@
 import './App.css';
 import '@fontsource/roboto/300.css';
 
-import { Exercises, Search, Ui, Calendar } from './components';
+import { Exercises, Search, Ui, Calendar, SearchYoutube } from './components';
 
 function App() {
   
@@ -11,8 +11,8 @@ function App() {
       <Calendar  />
       <Exercises />
       <Search />
-    </div>
 
+    </div>
   );
 }
 
