@@ -1,10 +1,11 @@
 import './App.css';
 import '@fontsource/roboto/300.css';
 
-import { BrowserRouter  as Router,Routes,Route} from "react-router-dom";
+import { BrowserRouter  as Router} from "react-router-dom";
 import { getFromLocalStorage, saveToLocalStorage } from './components/utils/LocalStorage';
-import { Exercises, Search, Ui, Calendar, UserSelect } from './components';
+import { Ui, } from './components';
 import React, { useState } from 'react';
+import AnimatedRoutes from './animateRoutes'
 
 
 function App() {
@@ -43,14 +44,8 @@ function App() {
 
   return (
     <Router>
-
-
       {checkPage() ? '' : <Ui /> }
-      <Routes>
-      <Route path="/" element={<UserSelect handleLogin={handleLogin} name={userProfile.name}  />}/>
-      <Route path="/home" element={<Search />}/>
-      <Route path="/result" element={<Exercises />}/>
-      </Routes>
+      <AnimatedRoutes  handleLogin={handleLogin} name={userProfile.name} />
     </Router>
 
   );
