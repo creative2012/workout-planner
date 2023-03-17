@@ -33,7 +33,7 @@ function App() {
   function checkPage() {
   let location = getBaseUrl();
   
-    //check if user has loaded first time into the landing page - if so play delayed fade animation for nav and footer
+    //check if user has loaded first time into the landing page
     if (window.location.href === location[0]) {
       
       return true;
@@ -53,8 +53,6 @@ function App() {
       </Routes>
     </Router>
 
-
-    </div>
   );
 }
 
