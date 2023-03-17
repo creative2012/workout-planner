@@ -1,9 +1,11 @@
 import './App.css';
 import '@fontsource/roboto/300.css';
+
 import { BrowserRouter  as Router,Routes,Route} from "react-router-dom";
 import { getFromLocalStorage, saveToLocalStorage } from './components/utils/LocalStorage';
 import { Exercises, Search, Ui, Calendar, UserSelect } from './components';
 import React, { useState } from 'react';
+
 
 function App() {
   
@@ -42,6 +44,7 @@ function App() {
   return (
     <Router>
 
+
       {checkPage() ? '' : <Ui /> }
       <Routes>
       <Route path="/" element={<UserSelect handleLogin={handleLogin} name={userProfile.name}  />}/>
@@ -50,6 +53,8 @@ function App() {
       </Routes>
     </Router>
 
+
+    </div>
   );
 }
 
