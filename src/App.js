@@ -1,7 +1,7 @@
 import './App.css';
 import '@fontsource/roboto/300.css';
+import { Exercises, Search, Ui, Calendar, SearchYoutube, UserSelect } from './components';
 import { getFromLocalStorage, saveToLocalStorage } from './components/utils/LocalStorage';
-import { Exercises, Search, Ui, Calendar, UserSelect } from './components';
 import { useState } from 'react';
 
 function App() {
@@ -32,8 +32,8 @@ function App() {
       <Calendar />
       <Exercises />
       <Search />
-    </div>
 
+    </div>
   );
 }
 
