@@ -1,11 +1,15 @@
 import './App.css';
 import '@fontsource/roboto/300.css';
-import { Exercises, Search, Ui, Calendar, SearchYoutube, UserSelect } from './components';
+
+import { BrowserRouter  as Router,Routes,Route} from "react-router-dom";
 import { getFromLocalStorage, saveToLocalStorage } from './components/utils/LocalStorage';
-import { useState } from 'react';
+import { Exercises, Search, Ui, Calendar, UserSelect } from './components';
+import React, { useState } from 'react';
+
 
 function App() {
- 
+  
+  
   const profile = {
     
       name: ''
@@ -13,25 +17,42 @@ function App() {
   }
    //check if user account already created
   const isUserAvailable = getFromLocalStorage('user');
-  //check if first load
-  const [firstLoad, setfirstLoad] = useState(true);
   const [userProfile, setUserProfile] = useState(isUserAvailable == null ? profile : isUserAvailable)
   //handle a login from Userselect child
   const handleLogin = (e) => {
     setUserProfile(e);
-    setfirstLoad(false);
+  
     saveToLocalStorage('user', { name: e });
     
+  }
+  //check base url
+  function getBaseUrl() {
+    var re = new RegExp(/^.*\//);
+    return re.exec(window.location.href);
+  }
+  function checkPage() {
+  let location = getBaseUrl();
+  
+    //check if user has loaded first time into the landing page - if so play delayed fade animation for nav and footer
+    if (window.location.href === location[0]) {
+      
+      return true;
+    }
   }
   
 
   return (
-    <div>
+    <Router>
 
-      {firstLoad ? <UserSelect handleLogin={handleLogin} name={userProfile.name} /> : <Ui />}
-      <Calendar />
-      <Exercises />
-      <Search />
+
+      {checkPage() ? '' : <Ui /> }
+      <Routes>
+      <Route path="/" element={<UserSelect handleLogin={handleLogin} name={userProfile.name}  />}/>
+      <Route path="/home" element={<Search />}/>
+      <Route path="/result" element={<Exercises />}/>
+      </Routes>
+    </Router>
+
 
     </div>
   );
