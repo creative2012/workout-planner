@@ -1,4 +1,5 @@
 import React, { useState, createRef } from 'react';
+import {useNavigate} from "react-router-dom";
 import './userSelect.css';
 import { getFromLocalStorage } from '../utils/LocalStorage';
 import Button from '@mui/material/Button';
@@ -12,6 +13,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 
 
 const UserSelect = (props) => {
+    const navigate = useNavigate();
     //get the value for the text input field
     const textInput = createRef();
     //model state
@@ -31,13 +33,15 @@ const UserSelect = (props) => {
         //check user name is longer than 3 chars
         if(loginName.length >= 3){
             props.handleLogin(textInput.current.value)
+            navigate("/home");
         }
 
     }
     //handle login if user profile exists
     const login = () => {
         const name = getFromLocalStorage('user').name
-        props.handleLogin(name)
+        props.handleLogin(name);
+        navigate("/home");
     }
 
     return (
