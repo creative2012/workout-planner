@@ -33,7 +33,11 @@ const UserSelect = (props) => {
         let loginName = textInput.current.value;
         //check user name is longer than 3 chars
         if (loginName.length >= 3) {
+            
             props.handleLogin(textInput.current.value)
+            setTimeout(() => {
+            handleClose();
+            },50);
             navigate("/home");
         }
 

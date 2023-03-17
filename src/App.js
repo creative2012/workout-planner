@@ -44,8 +44,6 @@ function App() {
 
   return (
     <Router>
-
-
       {checkPage() ? '' : <Ui /> }
       <AnimatedRoutes  handleLogin={handleLogin} name={userProfile.name} />
     </Router>
