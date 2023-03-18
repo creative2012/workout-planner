@@ -11,3 +11,10 @@
   grid-template-columns: auto 3fr 1fr;
   grid-template-areas: "muscle searchResults .";
 }
+#searchResults {
+  grid-area: searchResults;
+  background-color: white;
+  height: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+}
