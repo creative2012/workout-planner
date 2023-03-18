@@ -63,3 +63,5 @@ function GetData(props) {
     </div>
   );
 }
+
+export default GetData;
