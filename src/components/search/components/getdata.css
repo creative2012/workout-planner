@@ -14,3 +14,8 @@
   grid-area: diff;
   font-size: 12px;
 }
+.type {
+  grid-area: type;
+  padding-left: 10px;
+  font-size: 12px;
+}
