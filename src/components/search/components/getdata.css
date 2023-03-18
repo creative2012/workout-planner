@@ -27,3 +27,6 @@ h4 {
   text-decoration: none;
   color: black;
 }
+.searchLink:hover {
+  color: lightslategray;
+}
