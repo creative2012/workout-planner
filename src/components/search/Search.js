@@ -1,31 +1,25 @@
 import React, { useState } from "react";
-import './search.css';
-import useApi from "../utils/Api.js";
+import "./search.css";
+import GetData from "./components/GetData";
+import MuscleMap from "./components/MuscleMap";
 
 function Search() {
-    /*const [muscle, setSearchMuscle] = useState("biceps");*/
-    const [muscle] = useState("biceps");
-    const options = {
-    headers:{ 'x-api-key': 'UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2'}
-    };
-    const { data, isLoading, error } = useApi ('https://api.api-ninjas.com/v1/exercises?muscle='+ muscle, options);
-    if(isLoading) {
-        return <p>Loading....</p>;
-    }
-    if(error){
-        return <p>{error.message}</p>;
-    }
-    console.log(data)
-    /*const handleInputChange = event => {
-        setSearchMuscle(event.target.value);
-        }*/
+  const [item, setItem] = useState("");
+  const [searchTerm, setSearchTerm] = useState("Random");
+  function getData(e) {
+    setSearchTerm(e);
+    setItem(e);
+  }
 
-    return (
-        <div>
-            {data.map(item => (
-                <li key={item.id}>{item.name}</li>
-            ))}      
-            </div>
-        )
-    }
-export default Search
+  return (
+    <div id="searchContainer">
+      <MuscleMap id="mMap" func={getData} />
+      <div id="searchResults">
+        <h2>{searchTerm}</h2>
+        <GetData data={item} />
+      </div>
+    </div>
+  );
+}
+
+export default Search;
