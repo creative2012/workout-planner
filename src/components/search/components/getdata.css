@@ -10,3 +10,7 @@
 .title {
   grid-area: title;
 }
+.diff {
+  grid-area: diff;
+  font-size: 12px;
+}
