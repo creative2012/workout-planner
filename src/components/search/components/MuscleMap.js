@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './muscleMap.css';
+import './styles.css';
 
 
 const MuscleMap = (props) => {
