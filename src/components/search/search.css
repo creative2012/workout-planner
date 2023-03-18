@@ -1,0 +1,37 @@
+#searchContainer {
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #4e4e4e09 10px
+    ),
+    repeating-linear-gradient(#f0f0f023, #eeeded56);
+  min-height: calc(100vh - 80px);
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: auto 3fr 1fr;
+  grid-template-areas: "muscle searchResults .";
+}
+#searchResults {
+  grid-area: searchResults;
+  background-color: white;
+  height: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#muscleMan {
+  grid-area: muscle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 980px) {
+  #searchContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #searchResults {
+    width: calc(100% - 40px);
+  }
+}
