@@ -7,3 +7,6 @@
     ". . ."
     "diff . type";
 }
+.title {
+  grid-area: title;
+}
