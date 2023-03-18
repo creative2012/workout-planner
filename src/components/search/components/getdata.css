@@ -23,3 +23,7 @@ h4 {
   line-height: 14px;
   font-size: 15px;
 }
+.searchLink {
+  text-decoration: none;
+  color: black;
+}
