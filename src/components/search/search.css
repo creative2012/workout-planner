@@ -18,3 +18,9 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+#muscleMan {
+  grid-area: muscle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
