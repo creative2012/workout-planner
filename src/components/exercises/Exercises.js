@@ -1,12 +1,14 @@
 import React from 'react';
 import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 import './exercises.css';
 import useApi  from '../utils/Api';
 import SearchYoutube from '../searchYoutube/SearchYoutube';
 import placeholder from '../../assets/media/placeholder-image.jpg';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 
 function Exercises() {
   let exercise = useLocation();
@@ -38,7 +40,7 @@ function Exercises() {
       <Link
           to={"/home"}
         >
-      <Button className="backButton">Back</Button>
+      <Button className="backButton"><FontAwesomeIcon icon={faArrowLeft}/>&nbsp;&nbsp;Back</Button>
       </Link>
       <Grid container spacing={2} className="exerciseContainer">
         <Grid item xs={12} md={6} lg={5} className="exerciseGridImage">
