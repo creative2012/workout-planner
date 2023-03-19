@@ -1,5 +1,6 @@
 .exerciseContainer{
     padding-top: 80px;
+    margin-top: 0 !important;
 }
 
 .exerciseImage{
@@ -15,4 +16,14 @@
 
 .exerciseGridDetails{
     padding: 0 1rem;
+}
+
+.backButton{
+    position: absolute!important;
+    top: 90px!important;
+    right: 20px!important;
+    color: black!important;
+}
+.backButton:hover{
+    background-color: yellow!important;
 }
