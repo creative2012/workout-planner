@@ -31,3 +31,11 @@ h4 {
 .searchLink:hover {
   color: lightslategray;
 }
+.workoutImage{
+  width: 200px;
+}
+@media only screen and (max-width: 980px) {
+  .workoutImage{
+    width: 130px;
+  }
+}

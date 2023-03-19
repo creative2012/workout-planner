@@ -42,11 +42,9 @@ function GetData(props) {
               marginBottom: 5 + "px",
             }}
           >
-            <img
+            <img className="workoutImage"
               src="./assets/media/abdominals.jpg"
-              style={{
-                width: 200 + "px",
-              }}
+              
               key={item.id}
             ></img>
             <div
