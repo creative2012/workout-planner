@@ -5,14 +5,14 @@ import './styles.css';
 const MuscleMap = (props) => {
     const [muscleGroups, setMuscleGroups] = useState({ primary: '',secondary: [] });
     const [view, setView] = useState('front');
-
+    
     const muscleGroupNames = {
         neck: 'neck',
         shoulders: 'shoulders',
-        upperarms: 'upperarms',
+        upperarms: 'biceps',
         chest: 'chest',
         waist: 'waist',
-        tummy: 'tummy',
+        tummy: 'abdominal',
         lowerarms: 'lowerarms',
         upperlegs: 'upperlegs',
         back1: 'back1',
@@ -28,6 +28,7 @@ const MuscleMap = (props) => {
     const clickedMuscleGroup = (e) => {
         const clickedGroup = e.target.className.baseVal;
         setMuscleGroups({ ...muscleGroups, primary: clickedGroup });
+        props.func(clickedGroup);
     }
     const switchView = (e) => {
         const toView = e.target.id;
@@ -35,9 +36,10 @@ const MuscleMap = (props) => {
     }
 
     return (
-        <div style={{ height: 600 + 'px', width: 300 + 'px' }}>
-            <div>{`Output: ${muscleGroups.primary}`}</div>
-            <button id="front" onClick={switchView}>Front</button><button onClick={switchView} id='back'>Back</button>
+        <div id="muscleMan" style={{ height: 600 + 'px', width: 300 + 'px' }}>
+            
+            <h2>Muscle Groups</h2>
+            <div><button id="front" onClick={switchView}>Front</button><button onClick={switchView} id='back'>Back</button></div>
             {view === 'front' ?
 
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
