@@ -3,7 +3,7 @@ import "./getdata.css";
 import useApi from "../../utils/Api.js";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { CircularProgress } from '@mui/material';
+import { CircularProgress, Rating } from '@mui/material';
 
 function GetData(props) {
 
@@ -42,11 +42,9 @@ function GetData(props) {
               marginBottom: 5 + "px",
             }}
           >
-            <img
+            <img className="workoutImage"
               src="./assets/media/abdominals.jpg"
-              style={{
-                width: 200 + "px",
-              }}
+              
               key={item.id}
             ></img>
             <div
@@ -60,7 +58,8 @@ function GetData(props) {
             >
               <h4 className="title">{item.name}</h4>
               <div className="diff">
-                <b>Level:</b> {item.difficulty}
+                <b>Level:</b> {item.difficulty} <br/>
+                <Rating name="read-only" value={item.difficulty === 'beginner' ? 1 : 3} readOnly />
               </div>
               <div className="type">
                 <b>Type:</b> {item.type}

@@ -9,6 +9,7 @@
 }
 .title {
   grid-area: title;
+  margin-top: 0;
 }
 .diff {
   grid-area: diff;
@@ -29,4 +30,12 @@ h4 {
 }
 .searchLink:hover {
   color: lightslategray;
+}
+.workoutImage{
+  width: 200px;
+}
+@media only screen and (max-width: 980px) {
+  .workoutImage{
+    width: 130px;
+  }
 }

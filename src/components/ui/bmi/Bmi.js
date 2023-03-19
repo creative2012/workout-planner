@@ -7,11 +7,11 @@ const Bmi = (props) => {
 
     let data2 = {
 
-            bmi: '',
-            health: '',
-            healthy_bmi_range: ''
-    
-}
+        bmi: '',
+        health: '',
+        healthy_bmi_range: ''
+
+    }
     const [response, setResponse] = useState(data2);
     const [userData, setUserData] = useState(getFromLocalStorage('user'));
     const options = {
@@ -25,26 +25,26 @@ const Bmi = (props) => {
     };
 
     useEffect(() => {
-    axios.request(options)
-        .then(function (response) {
-            console.log(response.data.data)
-            setResponse(response.data.data)
+        axios.request(options)
+            .then(function (response) {
+                console.log(response.data.data)
+                setResponse(response.data.data)
 
-        }).catch(function (error) {
-            console.error(error);
-        });
+            }).catch(function (error) {
+                console.error(error);
+            });
     }, [props]);
-        
-        return (
 
-            <div id="bmiResult">
-   
-                <div className='smallTitle'>{response.bmi} <span>Your BMI</span></div>
-                <div className='smallTitle'>{response.health} <span>Your Health</span></div>
-             
-            </div>
-        )
-        
+    return (
+
+        <div id="bmiResult">
+
+            <div className='smallTitle'>{response.bmi} <span>Your BMI</span></div>
+            <div className='smallTitle'>{response.health} <span>Your Health</span></div>
+
+        </div>
+    )
+
 }
 
 export default Bmi
