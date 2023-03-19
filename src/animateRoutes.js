@@ -12,7 +12,7 @@ function AnimatedRoutes(props) {
             
           <Route path="/" element={<UserSelect handleLogin={props.handleLogin} name={props.name}  />}/>
           <Route path="/home" element={<Search />}/>
-          <Route path="/result" element={<Exercises name={"Spider crawl"}/>}/>
+          <Route path="/result" element={<Exercises />}/>
           </Routes>
     </AnimatePresence>
   )

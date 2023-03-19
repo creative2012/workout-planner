@@ -1,17 +1,20 @@
 import React from 'react';
+import { useLocation } from "react-router";
 import './exercises.css';
 import useApi  from '../utils/Api';
 import SearchYoutube from '../searchYoutube/SearchYoutube';
 import placeholder from '../../assets/media/placeholder-image.jpg';
 import Grid from '@mui/material/Grid';
 
-function Exercises(props) {
+function Exercises() {
+  let exercise = useLocation();
+  //console.log(exercise.state.id);
   let eName, eType, eMuscle, eEquipment, eInstructions, eYoutube  = "";
   const options = {
     headers: { "x-api-key": "UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2" },
   };
   const { data, isLoading, error } = useApi(
-    "https://api.api-ninjas.com/v1/exercises?name=" + props.name,
+    "https://api.api-ninjas.com/v1/exercises?name=" + exercise.state.id,
     options
   );
   if (isLoading) {
