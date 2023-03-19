@@ -30,9 +30,9 @@ function Exercises() {
     if(data.length > 0)
     {
       eName = data[0].name;
-      eType = capitalizeFirstLetter(data[0].type);
-      eMuscle = capitalizeFirstLetter(data[0].muscle);
-      eEquipment = capitalizeFirstLetter(data[0].equipment);
+      eType = capitalizeFirstLetter(data[0].type.replace(/_/g," "));
+      eMuscle = capitalizeFirstLetter(data[0].muscle.replace(/_/g," "));
+      eEquipment = capitalizeFirstLetter(data[0].equipment.replace(/_/g," "));
       eInstructions = data[0].instructions;
       eYoutube = data[0].name.replace(/ /g,"%");
     }
