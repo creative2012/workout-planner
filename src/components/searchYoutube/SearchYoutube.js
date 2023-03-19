@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import useApi from "../utils/Api.js";
 import axios from "axios";
+import './searchYoutube.css';
 
-function SearchYoutube() {
-    const [query, setQuery] = useState("biceps");
+function SearchYoutube(props) {
+    const query = props.query;
     const [linkArray, setlinkArray] = useState([]);
     const array1 = [];
     const options = {
@@ -33,13 +33,13 @@ function SearchYoutube() {
     }, [query]);
 
     return (
-        <div>
+        <div className="YoutubeVideos">
               {
-                //(JSON.stringify(data.results[0]));    
                 linkArray.map(item => (
                     <iframe
-                    width="560"
-                    height="315"
+                    className="video"
+                    width="426"
+                    height="240"
                     src={item.link}
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
