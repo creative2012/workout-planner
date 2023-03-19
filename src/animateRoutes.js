@@ -11,7 +11,7 @@ function AnimatedRoutes(props) {
           <Routes location={location} key={location.pathname}>
           <Route path="/" element={<UserSelect handleLogin={props.handleLogin} name={props.name}  />}/>
           <Route path="/home" element={<Search />}/>
-          <Route path="/result" element={<Exercises />}/>
+          <Route path="/result" element={<Exercises name={"Cocoons"}/>}/>
           </Routes>
     </AnimatePresence>
   )
