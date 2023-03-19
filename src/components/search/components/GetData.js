@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./getdata.css";
 import useApi from "../../utils/Api.js";
 import { Link } from "react-router-dom";
-
+import { motion, AnimatePresence } from "framer-motion";
+let timer = 0.5;
 function GetData(props) {
+  
   const options = {
     headers: { "x-api-key": "UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2" },
   };
@@ -16,9 +18,15 @@ function GetData(props) {
   } else {
     console.log(data);
   }
-  return (
-    <div className="searchBox">
-      {data.map((item) => (
+  function showResult(item) {
+    
+      return (
+        
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.2, ease: "linear" }}
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}>
         <Link
           to={"/result"}
           className="searchLink"
@@ -59,8 +67,25 @@ function GetData(props) {
             </div>
           </div>
         </Link>
-      ))}
+      </motion.div>
+      )
+   
+    
+  }
+  return (
+    <AnimatePresence>
+    <div className="searchBox">
+      {
+        
+        data.map((item) => {
+          return showResult(item);
+          
+        })
+    
+    
+      }
     </div>
+    </AnimatePresence>
   );
 }
 
