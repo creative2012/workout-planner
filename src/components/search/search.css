@@ -9,12 +9,18 @@
 #searchResults{
     grid-area: searchResults;
     background-color: white;
-    height: fit-content;
+    height: calc(100vh - 90px);
     padding-left: 20px;
-    padding-right: 20px;
-    min-height: calc(100vh - 80px);
-
+    min-height: calc(100vh - 100px);
+    overflow: hidden;
     
+}
+#SearchBoxes{
+    padding-right: 20px;
+    overflow-y: auto;
+    height: calc(100vh - 170px);
+    
+
 }
 #muscleMan{
     grid-area: muscle;
@@ -22,6 +28,20 @@
     flex-direction: column;
     align-items: center;
     
+}
+#SearchBoxes::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;  
+}
+#SearchBoxes::-webkit-scrollbar {
+  width: 5px;
+  padding-right: 5px;
+  background-color: transparent;
+}
+
+#SearchBoxes::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #8f8e8e5b;
 }
 
 @media only screen and (max-width: 980px) {
@@ -34,6 +54,19 @@
     width: calc(100% - 40px);
     
     
+}
+#searchResults{
+    overflow: unset;
+    overflow-y:unset;
+    max-height: unset;
+    
+}
+#SearchBoxes{
+    padding-right: unset;
+    overflow-y: unset;
+    height: unset;
+    
+
 }
 
 }

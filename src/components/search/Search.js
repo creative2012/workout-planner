@@ -23,7 +23,9 @@ function Search() {
             <MuscleMap id="mMap" func={getData}/>
             <div id="searchResults">
                 <h2>{searchTerm}</h2>
+                <div id="SearchBoxes">
                    <GetData data={item} />
+                   </div>
             </div>
         </motion.div>
     )
