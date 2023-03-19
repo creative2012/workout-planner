@@ -58,7 +58,7 @@ const UserSelect = (props) => {
                     <DialogTitle>Create Profile</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            To Begin using our website, please enter your Name below.
+                            To begin using our website, please enter your name below.
                         </DialogContentText>
                         <TextField
                             required={true}
@@ -83,9 +83,9 @@ const UserSelect = (props) => {
                             <em>FIT<span className="yellowFont">PLAN</span></em>
                         </div>
                         <div>THE BODY
-                            <span className="yellowFont">ACHIVES</span>
+                            <span className="yellowFont">ACHIEVES</span>
                             WHAT THE MIND
-                            <span className="yellowFont">BELIVES</span>
+                            <span className="yellowFont">BELIEVES</span>
                         </div>
                     </div>
                     <div id="title">
