@@ -1,5 +1,6 @@
 .exerciseContainer{
     padding-top: 80px;
+    margin-top: 0 !important;
 }
 
 .exerciseImage{
