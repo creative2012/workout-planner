@@ -6,6 +6,7 @@ import placeholder from '../../assets/media/placeholder-image.jpg';
 import Grid from '@mui/material/Grid';
 
 function Exercises(props) {
+  let eName, eType, eMuscle, eEquipment, eInstructions, eYoutube  = "";
   const options = {
     headers: { "x-api-key": "UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2" },
   };
@@ -17,6 +18,15 @@ function Exercises(props) {
     return <p>Loading....</p>;
   } else {
     console.log(data);
+    if(data.length > 0)
+    {
+      eName = data[0].name;
+      eType = data[0].type;
+      eMuscle = data[0].muscle;
+      eEquipment = data[0].equipment;
+      eInstructions = data[0].instructions;
+      eYoutube = data[0].name.replace(/ /g,"%");
+    }
   }
   return (
     <div>
@@ -26,15 +36,15 @@ function Exercises(props) {
         </Grid>
         <Grid item xs={12} md={6} lg={7}>
           <div className="exerciseGridDetails">
-            <h1>Name: {data[0].name}</h1>
-            <h2>Type: {data[0].type}</h2>
-            <h2>Muscle: {data[0].muscle}</h2>
-            <h3>Equipment: {data[0].equipment}</h3>
-            <h3>Instructions: {data[0].instructions}</h3>
+            <h1>Name: {eName}</h1>
+            <h2>Type: {eType}</h2>
+            <h2>Muscle: {eMuscle}</h2>
+            <h3>Equipment: {eEquipment}</h3>
+            <h3>Instructions: {eInstructions}</h3>
           </div>
         </Grid>
         <Grid item xs={12}>
-          <SearchYoutube query="incline+hammer+curls" />
+          <SearchYoutube query={eYoutube + "Gym%Exercise%Technique"} />
         </Grid> 
       </Grid>
     </div>
