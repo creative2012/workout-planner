@@ -17,3 +17,9 @@
 .exerciseGridDetails{
     padding: 0 1rem;
 }
+
+.backButton{
+    position: absolute!important;
+    top: 90px!important;
+    right: 20px!important;
+}

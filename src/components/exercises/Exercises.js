@@ -5,6 +5,8 @@ import useApi  from '../utils/Api';
 import SearchYoutube from '../searchYoutube/SearchYoutube';
 import placeholder from '../../assets/media/placeholder-image.jpg';
 import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
 
 function Exercises() {
   let exercise = useLocation();
@@ -33,6 +35,11 @@ function Exercises() {
   }
   return (
     <div>
+      <Link
+          to={"/home"}
+        >
+      <Button className="backButton">Back</Button>
+      </Link>
       <Grid container spacing={2} className="exerciseContainer">
         <Grid item xs={12} md={6} lg={5} className="exerciseGridImage">
           <img className='exerciseImage' src={placeholder} alt="Placeholder"></img>
