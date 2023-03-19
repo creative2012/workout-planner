@@ -23,14 +23,16 @@ function Exercises() {
   );
   if (isLoading) {
     return <p>Loading....</p>;
+  } else if(error){
+    console.log(error);
   } else {
     console.log(data);
     if(data.length > 0)
     {
       eName = data[0].name;
-      eType = data[0].type;
-      eMuscle = data[0].muscle;
-      eEquipment = data[0].equipment;
+      eType = capitalizeFirstLetter(data[0].type);
+      eMuscle = capitalizeFirstLetter(data[0].muscle);
+      eEquipment = capitalizeFirstLetter(data[0].equipment);
       eInstructions = data[0].instructions;
       eYoutube = data[0].name.replace(/ /g,"%");
     }
@@ -61,6 +63,10 @@ function Exercises() {
       </Grid>
     </div>
   )
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 export default Exercises
