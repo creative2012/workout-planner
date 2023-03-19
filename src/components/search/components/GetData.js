@@ -1,28 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./getdata.css";
 import useApi from "../../utils/Api.js";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-let timer = 0.5;
+import { CircularProgress } from '@mui/material';
+
 function GetData(props) {
-  
+
   const options = {
     headers: { "x-api-key": "UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2" },
   };
-  const { data, isLoading, error } = useApi(
+  const { data, isLoading} = useApi(
     "https://api.api-ninjas.com/v1/exercises?muscle=" + props.data,
     options
   );
   if (isLoading) {
-    return <p>Loading....</p>;
+    return <div style={{marginTop: 100+'px',display:'flex', alignItems: 'center', justifyContent:'center'}}> <CircularProgress /></div>;
   } else {
     console.log(data);
   }
   function showResult(item) {
-    
-      return (
-        
-      <motion.div 
+
+    return (
+
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.2, ease: "linear" }}
@@ -68,23 +69,23 @@ function GetData(props) {
           </div>
         </Link>
       </motion.div>
-      )
-   
-    
+    )
+
+
   }
   return (
     <AnimatePresence>
-    <div className="searchBox">
-      {
-        
-        data.map((item) => {
-          return showResult(item);
-          
-        })
-    
-    
-      }
-    </div>
+      <div className="searchBox">
+        {
+
+          data.map((item) => {
+            return showResult(item);
+
+          })
+
+
+        }
+      </div>
     </AnimatePresence>
   );
 }
