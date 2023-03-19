@@ -43,8 +43,6 @@ function App() {
 
   return (
     <Router>
-
-
       {checkPage() ? '' : <Ui /> }
       <Routes>
       <Route path="/" element={<UserSelect handleLogin={handleLogin} name={userProfile.name}  />}/>
