@@ -1,0 +1,16 @@
+.smallTitle span{
+    font-size: 10px;
+    color: yellow;
+}
+.smallTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#bmiResult{
+    display: flex;
+    gap: 20px;
+    border: 1px dashed white;
+    padding: 5px 10px;
+}

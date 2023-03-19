@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getFromLocalStorage } from '../utils/LocalStorage';
 import { motion } from "framer-motion";
 import './ui.css';
+import Bmi from './bmi/Bmi';
 
 const Ui = () => {
   const [name, setName] = useState('');
@@ -20,11 +21,7 @@ const Ui = () => {
             <p>Hello {name}!</p>
         </div>
         <div className="headerInnerContainer">
-            <ul>
-                <li>Calender</li>
-                <li>BMI Calculator</li>
-                <li>Settings</li>
-            </ul>
+        <Bmi />      
         </div>
     </motion.div>
   )
