@@ -1,27 +1,53 @@
 import React from 'react';
+import { useLocation } from "react-router";
 import './exercises.css';
+import useApi  from '../utils/Api';
 import SearchYoutube from '../searchYoutube/SearchYoutube';
 import placeholder from '../../assets/media/placeholder-image.jpg';
 import Grid from '@mui/material/Grid';
 
-const Exercises = () => {
+function Exercises() {
+  let exercise = useLocation();
+  //console.log(exercise.state.id);
+  let eName, eType, eMuscle, eEquipment, eInstructions, eYoutube  = "";
+  const options = {
+    headers: { "x-api-key": "UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2" },
+  };
+  const { data, isLoading, error } = useApi(
+    "https://api.api-ninjas.com/v1/exercises?name=" + exercise.state.id,
+    options
+  );
+  if (isLoading) {
+    return <p>Loading....</p>;
+  } else {
+    console.log(data);
+    if(data.length > 0)
+    {
+      eName = data[0].name;
+      eType = data[0].type;
+      eMuscle = data[0].muscle;
+      eEquipment = data[0].equipment;
+      eInstructions = data[0].instructions;
+      eYoutube = data[0].name.replace(/ /g,"%");
+    }
+  }
   return (
     <div>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} className="exerciseContainer">
         <Grid item xs={12} md={6} lg={5} className="exerciseGridImage">
           <img className='exerciseImage' src={placeholder} alt="Placeholder"></img>
         </Grid>
         <Grid item xs={12} md={6} lg={7}>
           <div className="exerciseGridDetails">
-            <h1>Incline Hammer Curls</h1>
-            <h2>Type: strength</h2>
-            <h2>Muscle: biceps</h2>
-            <h3>Equipment: dumbbell</h3>
-            <h3>Instructions: Seat yourself on an incline bench with a dumbbell in each hand. You should pressed firmly against he back with your feet together. Allow the dumbbells to hang straight down at your side, holding them with a neutral grip. This will be your starting position. Initiate the movement by flexing at the elbow, attempting to keep the upper arm stationary. Continue to the top of the movement and pause, then slowly return to the start position.</h3>
+            <h1>Name: {eName}</h1>
+            <h2>Type: {eType}</h2>
+            <h2>Muscle: {eMuscle}</h2>
+            <h3>Equipment: {eEquipment}</h3>
+            <h3>Instructions: {eInstructions}</h3>
           </div>
         </Grid>
         <Grid item xs={12}>
-          <SearchYoutube query="incline+hammer+curls" />
+          <SearchYoutube query={eYoutube + "Gym%Exercise%Technique"} />
         </Grid> 
       </Grid>
     </div>
