@@ -9,6 +9,7 @@ import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
+import { motion } from "framer-motion";
 
 function Exercises() {
   let exercise = useLocation();
@@ -37,7 +38,11 @@ function Exercises() {
     }
   }
   return (
-    <div key="exercises">
+    <motion.div key="exercises"
+    initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{ delay: 0, duration: 0.2, ease: "linear"}}
+        exit={{opacity: 0, transition:{duration: 0.5}}}>
       <Link
           to={"/home"}
         >
@@ -60,7 +65,7 @@ function Exercises() {
           <SearchYoutube query={eYoutube + "Gym%Exercise%Technique"} />
         </Grid> 
       </Grid>
-    </div>
+    </motion.div>
   )
 }
 
