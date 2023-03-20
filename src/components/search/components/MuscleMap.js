@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '@mui/material/Button';
 import './styles.css';
 
 
@@ -39,7 +40,10 @@ const MuscleMap = (props) => {
         <div id="muscleMan" style={{ height: 600 + 'px', width: 300 + 'px' }}>
             
             <h2>Muscle Groups</h2>
-            <div><button id="front" onClick={switchView}>Front</button><button onClick={switchView} id='back'>Back</button></div>
+            <div>
+            <Button id="front" className="frontBackButtons"  variant="outlined" onClick={switchView}s>Front</Button>
+            <Button id="back" className="frontBackButtons" variant="outlined" onClick={switchView}>Back</Button>
+            </div>
             {view === 'front' ?
 
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"

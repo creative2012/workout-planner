@@ -1,18 +1,26 @@
 
-    .muscle_group{
-        transition: all 0.2s ease;
-    }
-    .muscle_group:hover {
-        fill: rgb(240, 76, 90) !important;
-        cursor: pointer;
-    }
-    .active{
-        fill: rgb(240, 76, 90);
-        stroke: black;
-        stroke-width: 10px;
-    }
-    .inactive{
-        fill: rgb(216, 216, 219);
-        stroke: black;
-        stroke-width: 10px;
-    }
+.muscle_group{
+    transition: all 0.2s ease;
+}
+.muscle_group:hover {
+    fill: rgb(240, 76, 90) !important;
+    cursor: pointer;
+}
+.active{
+    fill: rgb(240, 76, 90);
+    stroke: black;
+    stroke-width: 10px;
+}
+.inactive{
+    fill: rgb(216, 216, 219);
+    stroke: black;
+    stroke-width: 10px;
+}
+
+.frontBackButtons{
+    background-color: yellow!important;
+    color: black!important;
+    margin: 5px!important;
+    font-weight: bold!important;
+    border-color: grey!important;
+}
