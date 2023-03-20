@@ -32,10 +32,11 @@ function SearchYoutube(props) {
     }, [query]);
 
     return (
-        <div className="YoutubeVideos">
+        <div className="YoutubeVideos" key="youTubeVids">
               {
                 linkArray.map(item => (
-                    <iframe key={item.id}
+                
+                    <iframe 
                     className="video"
                     width="426"
                     height="240"
@@ -44,6 +45,7 @@ function SearchYoutube(props) {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     ></iframe>
+              
                 )) 
                }
             </div>

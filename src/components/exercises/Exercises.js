@@ -37,7 +37,7 @@ function Exercises() {
     }
   }
   return (
-    <div>
+    <div key="exercises">
       <Link
           to={"/home"}
         >
