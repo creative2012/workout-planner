@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./getdata.css";
 import useApi from "../../utils/Api.js";
 import { Link } from "react-router-dom";
@@ -16,9 +16,7 @@ function GetData(props) {
   );
   if (isLoading) {
     return <div style={{marginTop: 100+'px',display:'flex', alignItems: 'center', justifyContent:'center'}}> <CircularProgress /></div>;
-  } else {
-    console.log(data);
-  }
+  } 
   function showResult(item) {
 
     return (

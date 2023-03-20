@@ -18,9 +18,7 @@ function SearchYoutube(props) {
     useEffect(() => {
     axios.request(options)
         .then(function (response) {
-        console.log(response.data.results);
         getResults(response.data.results);
-        console.log(array1);
     }).catch(function (error) {
         console.error(error);
     });
