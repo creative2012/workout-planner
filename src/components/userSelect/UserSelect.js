@@ -109,7 +109,7 @@ const UserSelect = (props) => {
                             margin="dense"
                             id="height"
                             label="Height"
-                            type="name"
+                            type="number"
                             variant="outlined"
                             sx={{ m: 1, width: 150, 
                             "& .MuiInputLabel-root": {color: 'black'},
@@ -128,7 +128,7 @@ const UserSelect = (props) => {
                             margin="dense"
                             id="weight"
                             label="Weight"
-                            type="name"
+                            type="number"
                             variant="outlined"
                             sx={{ m: 1, width: 150, 
                             "& .MuiInputLabel-root": {color: 'black'},
