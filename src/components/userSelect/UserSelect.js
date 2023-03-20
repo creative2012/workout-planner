@@ -87,7 +87,6 @@ const UserSelect = (props) => {
                         <div>
                         <TextField
                             required={true}
-                            inputRef={textInput}
                             autoFocus
                             className="loginTextFields"
                             margin="dense"
@@ -103,7 +102,6 @@ const UserSelect = (props) => {
                         />
                         <TextField
                             required={true}
-                            inputRef={textInput}
                             autoFocus
                             className="loginTextFields"
                             margin="dense"
@@ -122,7 +120,6 @@ const UserSelect = (props) => {
                         />
                         <TextField
                             required={true}
-                            inputRef={textInput}
                             autoFocus
                             className="loginTextFields"
                             margin="dense"
