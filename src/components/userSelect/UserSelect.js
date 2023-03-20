@@ -11,7 +11,6 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import InputAdornment from '@mui/material/InputAdornment';
 import { motion } from "framer-motion";
-import { width } from '@mui/system';
 
 
 
@@ -56,8 +55,13 @@ const UserSelect = (props) => {
         initial={{opacity: 1}}
         exit={{opacity: 0, transition:{duration: 0.5}}}>
             <div id="splashBg" >
-                <Dialog open={open} onClose={handleClose}>
-                    <DialogTitle>START TRAINING TODAY</DialogTitle>
+                <Dialog open={open} onClose={handleClose} 
+                PaperProps={{
+                style: {
+                backgroundColor: '#ffff33',
+                },
+                }}>
+                    <DialogTitle className="loginFont">START TRAINING TODAY</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
                             Please fill in the details below.
@@ -67,12 +71,17 @@ const UserSelect = (props) => {
                             required={true}
                             inputRef={textInput}
                             autoFocus
+                            className="loginTextFields"
                             margin="dense"
                             id="name"
                             label="Name"
                             type="text"
                             variant="outlined"
-                            sx={{  width: '100%'}}
+                            sx={{  width: '100%',
+                            "& .MuiInputLabel-root": {color: 'black'},
+                            "& .MuiOutlinedInput-root.Mui-focused": {
+                              "& > fieldset": { borderColor: "black" },
+                            }}}
                         />
                         </div>
                         <div>
@@ -80,23 +89,33 @@ const UserSelect = (props) => {
                             required={true}
                             inputRef={textInput}
                             autoFocus
+                            className="loginTextFields"
                             margin="dense"
                             id="age"
                             label="Age"
                             type="number"
                             variant="outlined"
-                            sx={{ m: 1, width: 150 }}
+                            sx={{ m: 1, width: 150, 
+                            "& .MuiInputLabel-root": {color: 'black'},
+                            "& .MuiOutlinedInput-root.Mui-focused": {
+                              "& > fieldset": { borderColor: "black" },
+                            }}}
                         />
                         <TextField
                             required={true}
                             inputRef={textInput}
                             autoFocus
+                            className="loginTextFields"
                             margin="dense"
                             id="height"
                             label="Height"
                             type="name"
                             variant="outlined"
-                            sx={{ m: 1, width: 150 }}
+                            sx={{ m: 1, width: 150, 
+                            "& .MuiInputLabel-root": {color: 'black'},
+                            "& .MuiOutlinedInput-root.Mui-focused": {
+                              "& > fieldset": { borderColor: "black" },
+                            }}}
                             InputProps={{
                                 endAdornment: <InputAdornment position="end">cm</InputAdornment>,
                               }}
@@ -105,12 +124,17 @@ const UserSelect = (props) => {
                             required={true}
                             inputRef={textInput}
                             autoFocus
+                            className="loginTextFields"
                             margin="dense"
                             id="weight"
                             label="Weight"
                             type="name"
                             variant="outlined"
-                            sx={{ m: 1, width: 150 }}
+                            sx={{ m: 1, width: 150, 
+                            "& .MuiInputLabel-root": {color: 'black'},
+                            "& .MuiOutlinedInput-root.Mui-focused": {
+                              "& > fieldset": { borderColor: "black" },
+                            }}}
                             InputProps={{
                                 endAdornment: <InputAdornment position="end">kg</InputAdornment>,
                               }}
@@ -118,8 +142,8 @@ const UserSelect = (props) => {
                         </div>
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={handleClose}>Cancel</Button>
-                        <Button onClick={userLogin}>Login</Button>
+                        <Button className="loginButtonFields" onClick={handleClose}>Cancel</Button>
+                        <Button className="loginButtonFields" onClick={userLogin}>Login</Button>
                     </DialogActions>
                 </Dialog>
                 <div id="splash">
@@ -161,5 +185,6 @@ const UserSelect = (props) => {
         </motion.div>
     )
 }
+
 
 export default UserSelect
