@@ -9,6 +9,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import InputAdornment from '@mui/material/InputAdornment';
 import { motion } from "framer-motion";
 
 
@@ -54,27 +55,92 @@ const UserSelect = (props) => {
         initial={{opacity: 1}}
         exit={{opacity: 0, transition:{duration: 0.5}}}>
             <div id="splashBg" >
-                <Dialog open={open} onClose={handleClose}>
-                    <DialogTitle>Create Profile</DialogTitle>
+                <Dialog open={open} onClose={handleClose} 
+                PaperProps={{
+                style: {
+                backgroundColor: '#ffff33',
+                },
+                }}>
+                    <DialogTitle className="loginFont">START TRAINING TODAY</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            To begin using our website, please enter your name below.
+                            Please fill in the details below.
                         </DialogContentText>
+                        <div>
                         <TextField
                             required={true}
                             inputRef={textInput}
                             autoFocus
+                            className="loginTextFields"
                             margin="dense"
                             id="name"
                             label="Name"
-                            type="name"
-                            fullWidth
-                            variant="standard"
+                            type="text"
+                            variant="outlined"
+                            sx={{  width: '100%',
+                            "& .MuiInputLabel-root": {color: 'black'},
+                            "& .MuiOutlinedInput-root.Mui-focused": {
+                              "& > fieldset": { color: 'black!important', borderColor: "black" },
+                            }}}
                         />
+                        </div>
+                        <div>
+                        <TextField
+                            required={true}
+                            autoFocus
+                            className="loginTextFields"
+                            margin="dense"
+                            id="age"
+                            label="Age"
+                            type="number"
+                            variant="outlined"
+                            sx={{ m: 1, width: 150, 
+                            "& .MuiInputLabel-root": {color: 'black'},
+                            "& .MuiOutlinedInput-root.Mui-focused": {
+                              "& > fieldset": { color: 'black!important', borderColor: "black" },
+                            }}}
+                        />
+                        <TextField
+                            required={true}
+                            autoFocus
+                            className="loginTextFields"
+                            margin="dense"
+                            id="height"
+                            label="Height"
+                            type="number"
+                            variant="outlined"
+                            sx={{ m: 1, width: 150, 
+                            "& .MuiInputLabel-root": {color: 'black'},
+                            "& .MuiOutlinedInput-root.Mui-focused": {
+                              "& > fieldset": { color: 'black!important', borderColor: "black" },
+                            }}}
+                            InputProps={{
+                                endAdornment: <InputAdornment position="end">cm</InputAdornment>,
+                              }}
+                        />
+                        <TextField
+                            required={true}
+                            autoFocus
+                            className="loginTextFields"
+                            margin="dense"
+                            id="weight"
+                            label="Weight"
+                            type="number"
+                            variant="outlined"
+                            sx={{ m: 1, width: 150, 
+                            "& .MuiInputLabel-root": {color: 'black'},
+                            "& .MuiOutlinedInput-root.Mui-focused": {
+                              "& > fieldset": { color: 'black!important', borderColor: "black"  },
+                            }}}
+                            InputProps={{
+                                endAdornment: <InputAdornment position="end">kg</InputAdornment>,
+                              }}
+                        />
+                        </div>
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={handleClose}>Cancel</Button>
-                        <Button onClick={userLogin}>Login</Button>
+                        <Button className="loginButtonFields" onClick={handleClose}>Cancel</Button>
+                        <Button className="loginButtonFields" onClick={userLogin}>Login</Button>
                     </DialogActions>
                 </Dialog>
                 <div id="splash">
@@ -116,5 +182,6 @@ const UserSelect = (props) => {
         </motion.div>
     )
 }
+
 
 export default UserSelect

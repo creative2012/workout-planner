@@ -32,6 +32,20 @@
 
 }
 
+.loginTextFields{
+    background-color: white!important;
+}
+
+.loginButtonFields{
+    color: black!important;
+    font-weight: bold!important;
+}
+
+.loginFont{
+    font-weight: bold!important;
+}
+
+
 #header {
     position: absolute;
     top: 40px;
