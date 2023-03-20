@@ -26,7 +26,6 @@ function Exercises() {
   } else if(error){
     console.log(error);
   } else {
-    console.log(data);
     if(data.length > 0)
     {
       eName = data[0].name;

@@ -70,8 +70,8 @@ const UserSelect = (props) => {
     }
     //handle login if user profile exists
     const login = () => {
-        const name = getFromLocalStorage('user').name
-        props.handleLogin(name);
+        const data = getFromLocalStorage('user')
+        props.handleLogin(data);
         navigate("/home");
     }
 

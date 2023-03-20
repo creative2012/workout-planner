@@ -25,7 +25,8 @@ function SearchYoutube(props) {
 
     function getResults(data) {
         data.slice(0,3).map((e) => {
-        array1.push({link:"https://www.youtube.com/embed/" + e.id})})
+        
+        array1.push({link:"https://www.youtube.com/embed/" + e.id, id: e.id})})
         setlinkArray(array1);
         }
     }, [query]);
@@ -34,7 +35,7 @@ function SearchYoutube(props) {
         <div className="YoutubeVideos">
               {
                 linkArray.map(item => (
-                    <iframe
+                    <iframe key={item.id}
                     className="video"
                     width="426"
                     height="240"
