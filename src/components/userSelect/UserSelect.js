@@ -80,7 +80,7 @@ const UserSelect = (props) => {
                             sx={{  width: '100%',
                             "& .MuiInputLabel-root": {color: 'black'},
                             "& .MuiOutlinedInput-root.Mui-focused": {
-                              "& > fieldset": { borderColor: "black" },
+                              "& > fieldset": { color: 'black!important', borderColor: "black" },
                             }}}
                         />
                         </div>
@@ -97,7 +97,7 @@ const UserSelect = (props) => {
                             sx={{ m: 1, width: 150, 
                             "& .MuiInputLabel-root": {color: 'black'},
                             "& .MuiOutlinedInput-root.Mui-focused": {
-                              "& > fieldset": { borderColor: "black" },
+                              "& > fieldset": { color: 'black!important', borderColor: "black" },
                             }}}
                         />
                         <TextField
@@ -112,7 +112,7 @@ const UserSelect = (props) => {
                             sx={{ m: 1, width: 150, 
                             "& .MuiInputLabel-root": {color: 'black'},
                             "& .MuiOutlinedInput-root.Mui-focused": {
-                              "& > fieldset": { borderColor: "black" },
+                              "& > fieldset": { color: 'black!important', borderColor: "black" },
                             }}}
                             InputProps={{
                                 endAdornment: <InputAdornment position="end">cm</InputAdornment>,
@@ -130,7 +130,7 @@ const UserSelect = (props) => {
                             sx={{ m: 1, width: 150, 
                             "& .MuiInputLabel-root": {color: 'black'},
                             "& .MuiOutlinedInput-root.Mui-focused": {
-                              "& > fieldset": { borderColor: "black" },
+                              "& > fieldset": { color: 'black!important', borderColor: "black"  },
                             }}}
                             InputProps={{
                                 endAdornment: <InputAdornment position="end">kg</InputAdornment>,
