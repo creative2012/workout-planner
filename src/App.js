@@ -22,8 +22,8 @@ function App() {
   //handle a login from Userselect child
   const handleLogin = (e) => {
     setUserProfile(e);
-  
-    saveToLocalStorage('user', { name: e });
+  console.log(e)
+    saveToLocalStorage('user', e);
     
   }
   //check base url
