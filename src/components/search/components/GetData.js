@@ -23,7 +23,7 @@ function GetData(props) {
 
     return (
 
-      <motion.div
+      <motion.div key={item.name}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.2, ease: "linear" }}
@@ -74,7 +74,7 @@ function GetData(props) {
   }
   return (
     <AnimatePresence>
-      <div className="searchBox">
+      <div key="searchResults" className="searchBox">
         {
 
           data.map((item) => {
