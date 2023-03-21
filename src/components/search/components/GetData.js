@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CircularProgress, Rating } from '@mui/material';
 
 function GetData(props) {
-
   const options = {
     headers: { "x-api-key": "UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2" },
   };
@@ -18,6 +17,8 @@ function GetData(props) {
     return <div style={{marginTop: 100+'px',display:'flex', alignItems: 'center', justifyContent:'center'}}> <CircularProgress /></div>;
   } 
   function showResult(item) {
+    
+
     return (
       <motion.div key={item.name}
         initial={{ opacity: 0 }}
@@ -45,7 +46,8 @@ function GetData(props) {
           >
             <img className="workoutImage"
               src={
-                "./assets/media/"+item.name.replaceALL(" ","_")+".jpg"
+                "./assets/media/"+item.name.replaceAll(" ","_")+".jpg"
+    
               }
               
               key={item.id}
