@@ -51,6 +51,7 @@ const UserSelect = (props) => {
     }
 
     return (
+        {/*Motion component from Framer Motion*/},
         <motion.div
         initial={{opacity: 1}}
         exit={{opacity: 0, transition:{duration: 0.5}}}>
@@ -78,6 +79,7 @@ const UserSelect = (props) => {
                             type="text"
                             variant="outlined"
                             sx={{  width: '100%',
+                            /*Overriding the syle of Material UI textfield*/
                             "& .MuiInputLabel-root": {color: 'black'},
                             "& .MuiOutlinedInput-root.Mui-focused": {
                               "& > fieldset": { color: 'black!important', borderColor: "black" },
@@ -157,6 +159,7 @@ const UserSelect = (props) => {
                     <div id="title">
                         {test == null ? 'Create new Profile' : ''}
                     </div>
+                    {/*Conditional Rendering to check if user has logged in before using local storage*/}
                     <div id="newUserBtn" onClick={test == null ? handleClickOpen : login}>{test == null ? '+' : props.name}</div>
                     <div id="footer">
                         <div id="featureCont">
