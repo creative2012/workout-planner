@@ -474,19 +474,19 @@ const MuscleMap = (props) => {
             <g
               onClick={clickedMuscleGroup}
               className={`muscle_group ${
-                muscleGroups.primary === muscleGroupNames.lower_back
+                muscleGroups.primary === muscleGroupNames.triceps
                   ? "active"
                   : "inactive"
               }`}
             >
               <path
-                className={muscleGroupNames.lower_back}
+                className={muscleGroupNames.triceps}
                 d="M1301 7354 c-29 -15 -76 -50 -105 -78 -75 -73 -86 -112 -86 -303 0
                             -139 2 -153 18 -153 28 0 117 56 170 108 46 45 50 52 57 113 13 115 52 180
                             148 241 46 30 48 32 31 46 -74 56 -154 65 -233 26z"
               />
               <path
-                className={muscleGroupNames.lower_back}
+                className={muscleGroupNames.triceps}
                 d="M2976 7373 c-21 -6 -96 -51 -96 -57 0 -2 29 -25 64 -50 75 -54 114
                             -119 123 -211 3 -33 15 -70 27 -88 29 -42 127 -120 176 -140 l40 -15 2 116 c4
                             181 1 220 -22 268 -25 50 -111 133 -167 159 -39 19 -113 28 -147 18z"
