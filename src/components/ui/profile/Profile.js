@@ -4,8 +4,9 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Logout from '@mui/icons-material/Logout';
+import { Link } from "react-router-dom";
 
-export default function AccountMenu(props) {
+function Profile(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -60,13 +61,23 @@ export default function AccountMenu(props) {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
+        <Link to={"/"}>
         <MenuItem onClick={handleClose}>
-          <ListItemIcon>
+          <ListItemIcon onClick={logOut}>
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
         </MenuItem>
+        </Link>
       </Menu>
     </div>
   );
 }
+
+const logOut = (event) => {
+    event.preventDefault();
+    localStorage.clear();
+
+};
+
+export default Profile
