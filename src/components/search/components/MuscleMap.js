@@ -13,7 +13,7 @@ const MuscleMap = (props) => {
     abdominals: "abdominals",
     upperarms: "biceps",
     chest: "chest",
-    calves: "calves",
+
     traps: "traps",
     triceps: "triceps",
     quadriceps: "quadriceps",
