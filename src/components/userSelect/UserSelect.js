@@ -174,7 +174,7 @@ const UserSelect = (props) => {
                             </div>
                         </div>
                         Get access to a comprehensive list of thousands of exercises, targeting every major muscle group. As
-                        well as our Fitness planner app, which includes a Diet plan.<br /> <br />Copyright © 2023 FitPlan All
+                        well as our Fitness planner app, which will help plan your workout.<br /> <br />Copyright © 2023 FitPlan All
                         Rights Reserved.
                     </div>
                 </div>
