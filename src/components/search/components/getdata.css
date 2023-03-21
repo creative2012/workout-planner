@@ -6,6 +6,7 @@
     "title title title"
     ". . ."
     "diff . type";
+    
 }
 .title {
   grid-area: title;
@@ -24,7 +25,7 @@
 }
 h4 {
   line-height: 14px;
-  font-size: 15px;
+  font-size: 20px;
 }
 .searchLink {
   text-decoration: none;
@@ -37,5 +38,8 @@ h4 {
   width: 200px;
   height: 200px;
   border-right:1px solid lightslategrey;
+}
+.searchLink div{
+  background-color: white;
 }
 
