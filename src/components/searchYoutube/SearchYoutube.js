@@ -34,11 +34,12 @@ function SearchYoutube(props) {
     }, [query]);
 
     return (
-        <div className="YoutubeVideos">
+        <div className="YoutubeVideos" key="youTubeVids">
               {
                 //Display 3 youtube videos with links from API result
                 linkArray.map(item => (
-                    <iframe
+                
+                    <iframe 
                     className="video"
                     width="426"
                     height="240"
@@ -47,6 +48,7 @@ function SearchYoutube(props) {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     ></iframe>
+              
                 )) 
                }
             </div>

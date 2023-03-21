@@ -16,10 +16,14 @@ import { motion } from "framer-motion";
 
 const UserSelect = (props) => {
     const navigate = useNavigate();
-    //get the value for the text input field
-    const textInput = createRef();
+    //get the value for the text input fields
+    const name = createRef();
+    const age = createRef();
+    const height = createRef();
+    const weight = createRef();
     //model state
     const [open, setOpen] = useState(false);
+    const [error, setError] = useState('');
     //check if there is a user profile already
     const test = getFromLocalStorage('user')
     const handleClickOpen = () => {
@@ -29,28 +33,50 @@ const UserSelect = (props) => {
     const handleClose = () => {
         setOpen(false);
     };
+    const setErrorMsg = type => {
+        return "Please enter your " + type;
+    }
     //handle userlogin if user profile does not exist
     const userLogin = () => {
-        let loginName = textInput.current.value;
-        //check user name is longer than 3 chars
-        if (loginName.length >= 3) {
-            
-            props.handleLogin(textInput.current.value)
+        setError('');
+        //validate all values - return error if incomplete
+        if (name.current.value.length < 3 ){
+            setError(setErrorMsg('Name (longer than 3 characters)'));
+            return;
+        }
+        else if ( age.current.value.length == 0 ){
+            setError(setErrorMsg('age'));
+            return;
+        }
+        else if (height.current.value.length == 0){
+            setError(setErrorMsg('height'));
+            return;
+        }
+        else if ( weight.current.value.length == 0){
+            setError(setErrorMsg('weight'));
+            return;
+        }
+        else {
+            setError('');
+            let data = { name: name.current.value, age: age.current.value, height: height.current.value, weight: weight.current.value }
+            props.handleLogin(data)
             setTimeout(() => {
             handleClose();
             },50);
             navigate("/home");
-        }
+        } 
+
 
     }
     //handle login if user profile exists
     const login = () => {
-        const name = getFromLocalStorage('user').name
-        props.handleLogin(name);
+        const data = getFromLocalStorage('user')
+        props.handleLogin(data);
         navigate("/home");
     }
 
     return (
+        {/*Motion component from Framer Motion*/},
         <motion.div
         initial={{opacity: 1}}
         exit={{opacity: 0, transition:{duration: 0.5}}}>
@@ -69,7 +95,7 @@ const UserSelect = (props) => {
                         <div>
                         <TextField
                             required={true}
-                            inputRef={textInput}
+                            inputRef={name}
                             autoFocus
                             className="loginTextFields"
                             margin="dense"
@@ -78,6 +104,7 @@ const UserSelect = (props) => {
                             type="text"
                             variant="outlined"
                             sx={{  width: '100%',
+                            /*Overriding the syle of Material UI textfield*/
                             "& .MuiInputLabel-root": {color: 'black'},
                             "& .MuiOutlinedInput-root.Mui-focused": {
                               "& > fieldset": { color: 'black!important', borderColor: "black" },
@@ -86,6 +113,7 @@ const UserSelect = (props) => {
                         </div>
                         <div>
                         <TextField
+                            inputRef={age}
                             required={true}
                             autoFocus
                             className="loginTextFields"
@@ -101,6 +129,7 @@ const UserSelect = (props) => {
                             }}}
                         />
                         <TextField
+                            inputRef={height}
                             required={true}
                             autoFocus
                             className="loginTextFields"
@@ -119,6 +148,7 @@ const UserSelect = (props) => {
                               }}
                         />
                         <TextField
+                            inputRef={weight}
                             required={true}
                             autoFocus
                             className="loginTextFields"
@@ -137,6 +167,7 @@ const UserSelect = (props) => {
                               }}
                         />
                         </div>
+                        <div style={{color: 'red'}}>{error ? error : ''}</div>
                     </DialogContent>
                     <DialogActions>
                         <Button className="loginButtonFields" onClick={handleClose}>Cancel</Button>
@@ -157,6 +188,7 @@ const UserSelect = (props) => {
                     <div id="title">
                         {test == null ? 'Create new Profile' : ''}
                     </div>
+                    {/*Conditional Rendering to check if user has logged in before using local storage*/}
                     <div id="newUserBtn" onClick={test == null ? handleClickOpen : login}>{test == null ? '+' : props.name}</div>
                     <div id="footer">
                         <div id="featureCont">
@@ -174,7 +206,7 @@ const UserSelect = (props) => {
                             </div>
                         </div>
                         Get access to a comprehensive list of thousands of exercises, targeting every major muscle group. As
-                        well as our Fitness planner app, which includes a Diet plan.<br /> <br />Copyright © 2023 FitPlan All
+                        well as our Fitness planner app, which will help plan your workout.<br /> <br />Copyright © 2023 FitPlan All
                         Rights Reserved.
                     </div>
                 </div>
