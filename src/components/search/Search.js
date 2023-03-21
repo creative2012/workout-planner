@@ -5,13 +5,11 @@ import MuscleMap from "./components/MuscleMap";
 import { motion } from "framer-motion";
 
 function Search() {
-    
     const [item, setItem] = useState('')
     const [searchTerm, setSearchTerm] = useState('Random')
     function getData(e){
         setSearchTerm(e)
         setItem(e);
-        
     }
      
     return (
@@ -29,7 +27,6 @@ function Search() {
             </div>
         </motion.div>
     )
-
     
 }
 export default Search

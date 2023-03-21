@@ -14,8 +14,7 @@ function SearchYoutube(props) {
     headers: {
         'X-RapidAPI-Key': '473c3dfe29msh141ce566ce74434p1b719ajsn65fb6a576b97',
         'X-RapidAPI-Host': 'simple-youtube-search.p.rapidapi.com'
-    }
-    };
+    }};
     useEffect(() => {
     //API request
     axios.request(options)
@@ -26,6 +25,7 @@ function SearchYoutube(props) {
         console.error(error);
     });
 
+    //function to get first 3 results and add it in array with the youtube link and id to embed
     function getResults(data) {
         data.slice(0,3).map((e) => {
         arrayYoutubelinks.push({link:"https://www.youtube.com/embed/" + e.id})})
@@ -38,7 +38,6 @@ function SearchYoutube(props) {
               {
                 //Display 3 youtube videos with links from API result
                 linkArray.map(item => (
-                
                     <iframe 
                     className="video"
                     width="426"
@@ -48,7 +47,6 @@ function SearchYoutube(props) {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     ></iframe>
-              
                 )) 
                }
             </div>
