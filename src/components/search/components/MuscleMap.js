@@ -22,7 +22,6 @@ const MuscleMap = (props) => {
     hamstrings: "hamstrings",
     glutes: "glutes",
     forearms: "forearms",
-    abductors: "back9",
   };
   const clickedMuscleGroup = (e) => {
     const clickedGroup = e.target.className.baseVal;
