@@ -3,9 +3,14 @@ import { getFromLocalStorage } from '../utils/LocalStorage';
 import { motion } from "framer-motion";
 import './ui.css';
 import Bmi from './bmi/Bmi';
+import Profile from './profile/Profile';
+import Avatar from '@mui/material/Avatar';
+import { yellow } from '@mui/material/colors';
+import { Button } from '@mui/material';
 
 const Ui = () => {
-
+let username = getFromLocalStorage('user').name;
+let userInitial = username.charAt(0);
   return (
     <motion.div id="headerContainer"
     initial={{height: 0}}
@@ -13,8 +18,9 @@ const Ui = () => {
             transition={{ delay: 0.5, duration: 0.2, ease: "linear"}}
             exit={{opacity: 0, height: 0, transition:{duration: 0.5}}}>
         <div className="headerInnerContainer">
-            <div id="userImage"></div>
-            <p>Hello {getFromLocalStorage('user').name}!</p>
+            {/*<div id="userImage"></div>*/}
+            <Profile name={userInitial}/>
+            <p>Hello {username}!</p>
         </div>
         <div className="headerInnerContainer">
         <Bmi />      
