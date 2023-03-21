@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
+import { Button } from "@mui/material";
 
 const MuscleMap = (props) => {
   const [muscleGroups, setMuscleGroups] = useState({
