@@ -76,6 +76,7 @@ const UserSelect = (props) => {
     }
 
     return (
+        {/*Motion component from Framer Motion*/},
         <motion.div
         initial={{opacity: 1}}
         exit={{opacity: 0, transition:{duration: 0.5}}}>
@@ -103,6 +104,7 @@ const UserSelect = (props) => {
                             type="text"
                             variant="outlined"
                             sx={{  width: '100%',
+                            /*Overriding the syle of Material UI textfield*/
                             "& .MuiInputLabel-root": {color: 'black'},
                             "& .MuiOutlinedInput-root.Mui-focused": {
                               "& > fieldset": { color: 'black!important', borderColor: "black" },
@@ -186,6 +188,7 @@ const UserSelect = (props) => {
                     <div id="title">
                         {test == null ? 'Create new Profile' : ''}
                     </div>
+                    {/*Conditional Rendering to check if user has logged in before using local storage*/}
                     <div id="newUserBtn" onClick={test == null ? handleClickOpen : login}>{test == null ? '+' : props.name}</div>
                     <div id="footer">
                         <div id="featureCont">
@@ -203,7 +206,7 @@ const UserSelect = (props) => {
                             </div>
                         </div>
                         Get access to a comprehensive list of thousands of exercises, targeting every major muscle group. As
-                        well as our Fitness planner app, which includes a Diet plan.<br /> <br />Copyright © 2023 FitPlan All
+                        well as our Fitness planner app, which will help plan your workout.<br /> <br />Copyright © 2023 FitPlan All
                         Rights Reserved.
                     </div>
                 </div>
