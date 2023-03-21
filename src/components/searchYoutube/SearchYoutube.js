@@ -5,7 +5,8 @@ import './searchYoutube.css';
 function SearchYoutube(props) {
     const query = props.query;
     const [linkArray, setlinkArray] = useState([]);
-    const array1 = [];
+    const arrayYoutubelinks = [];
+    //key for requesting API
     const options = {
     method: 'GET',
     url: 'https://simple-youtube-search.p.rapidapi.com/search',
@@ -16,25 +17,26 @@ function SearchYoutube(props) {
     }
     };
     useEffect(() => {
+    //API request
     axios.request(options)
         .then(function (response) {
-        console.log(response.data.results);
+        //call function to get the first 3 youtube links
         getResults(response.data.results);
-        console.log(array1);
     }).catch(function (error) {
         console.error(error);
     });
 
     function getResults(data) {
         data.slice(0,3).map((e) => {
-        array1.push({link:"https://www.youtube.com/embed/" + e.id})})
-        setlinkArray(array1);
+        arrayYoutubelinks.push({link:"https://www.youtube.com/embed/" + e.id})})
+        setlinkArray(arrayYoutubelinks);
         }
     }, [query]);
 
     return (
         <div className="YoutubeVideos">
               {
+                //Display 3 youtube videos with links from API result
                 linkArray.map(item => (
                     <iframe
                     className="video"
