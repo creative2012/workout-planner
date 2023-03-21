@@ -6,6 +6,7 @@
     "title title title"
     ". . ."
     "diff . type";
+    
 }
 .title {
   grid-area: title;
@@ -24,11 +25,25 @@
 }
 h4 {
   line-height: 14px;
-  font-size: 15px;
+  font-size: 20px;
 }
 .searchLink {
   text-decoration: none;
   color: black;
+}
+div{
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+}
+.searchLink:hover > div{
+  transform: scale(0.99);
+  -webkit-transform: scale(0.99);
+  -moz-transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  -o-transform: scale(0.99);
 }
 .searchLink:hover {
   color: lightslategray;
@@ -36,6 +51,14 @@ h4 {
 .workoutImage{
   width: 200px;
   height: 200px;
-  border-right:1px solid lightslategrey;
+  border-right:1px solid rgba(27, 31, 35, 0.15) ;
+}
+.searchLink div{
+  background-color: white;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
 }
 

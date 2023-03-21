@@ -12,13 +12,18 @@
     display: flex;
     gap: 20px;
     border: 1px dashed white;
-    padding: 5px 10px;
+    padding: 5px 15px;
     transition: 0.2s;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
     cursor: pointer;
+    border-radius: 1.25rem;
+    -webkit-border-radius: 1.25rem;
+    -moz-border-radius: 1.25rem;
+    -ms-border-radius: 1.25rem;
+    -o-border-radius: 1.25rem;
 }
 #bmiResult:hover{
     transform: scale(1.1);
