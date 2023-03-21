@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './searchYoutube.css';
+function makeId() {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < 8) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
 
 function SearchYoutube(props) {
     const query = props.query;
@@ -24,6 +35,7 @@ function SearchYoutube(props) {
     }).catch(function (error) {
         console.error(error);
     });
+    
 
     //function to get first 3 results and add it in array with the youtube link and id to embed
     function getResults(data) {
@@ -40,6 +52,7 @@ function SearchYoutube(props) {
                 //Display 3 youtube videos with links from API result
                 linkArray.map(item => (
                     <iframe 
+                    key={makeId()}
                     className="video"
                     width="426"
                     height="240"

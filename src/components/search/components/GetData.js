@@ -29,6 +29,11 @@ function GetData(props) {
           className="searchLink"
           state={{
             id: item.name,
+            type: item.type,
+            muscle: item.muscle,
+            equipment: item.equipment,
+            instructions: item.instructions,
+
           }}
         >
           <div
