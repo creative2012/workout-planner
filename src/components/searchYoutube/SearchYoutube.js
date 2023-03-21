@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './searchYoutube.css';
+function makeId() {
+    let result = '';
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    let counter = 0;
+    while (counter < 8) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      counter += 1;
+    }
+    return result;
+}
 
 function SearchYoutube(props) {
     const query = props.query;
@@ -22,6 +33,7 @@ function SearchYoutube(props) {
     }).catch(function (error) {
         console.error(error);
     });
+    
 
     function getResults(data) {
         data.slice(0,3).map((e) => {
@@ -37,6 +49,7 @@ function SearchYoutube(props) {
                 linkArray.map(item => (
                 
                     <iframe 
+                    key={makeId()}
                     className="video"
                     width="426"
                     height="240"

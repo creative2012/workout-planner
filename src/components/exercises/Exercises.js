@@ -28,18 +28,18 @@ function Exercises() {
     <motion.div key="exercises"
     initial={{opacity: 0}}
         animate={{opacity: 1}}
-        transition={{ delay: 0, duration: 0.2, ease: "linear"}}
+        transition={{  delay: 1, duration: 0.5, ease: "linear"}}
         exit={{opacity: 0, transition:{duration: 0.5}}}>
-      <Link
+      <Link key="exercises1"
           to={"/home"}
         >
-      <Button className="backButton"><FontAwesomeIcon icon={faArrowLeft}/>&nbsp;&nbsp;Back</Button>
+      <Button key="exercises2" className="backButton"><FontAwesomeIcon icon={faArrowLeft}/>&nbsp;&nbsp;Back</Button>
       </Link>
-      <Grid container spacing={2} className="exerciseContainer">
-        <Grid item xs={12} md={6} lg={5} className="exerciseGridImage">
+      <Grid key="exercises3" container spacing={2} className="exerciseContainer">
+        <Grid key="exercises4" item xs={12} md={6} lg={5} className="exerciseGridImage">
           <img className='exerciseImage' src={placeholder} alt="Placeholder"></img>
         </Grid>
-        <Grid item xs={12} md={6} lg={7}>
+        <Grid key="exercises5" item xs={12} md={6} lg={7}>
           <div className="exerciseGridDetails">
             <h1>Name: {eName}</h1>
             <h2>Type: {eType}</h2>
@@ -48,8 +48,8 @@ function Exercises() {
             <h3>Instructions: {eInstructions}</h3>
           </div>
         </Grid>
-        <Grid item xs={12}>
-          <SearchYoutube query={eYoutube + "Gym%Exercise%Technique"} />
+        <Grid key="exercises6" item xs={12}>
+          <SearchYoutube key="youtube"query={eYoutube + "Gym%Exercise%Technique"} />
         </Grid> 
       </Grid>
     </motion.div>
