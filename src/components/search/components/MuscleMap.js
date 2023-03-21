@@ -20,8 +20,8 @@ const MuscleMap = (props) => {
     lower_back: "lower_back",
     lats: "lats",
     hamstrings: "hamstrings",
+    glutes: "glutes",
 
-    forearms: "forearms",
     abductors: "back9",
   };
   const clickedMuscleGroup = (e) => {
