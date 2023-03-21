@@ -41,7 +41,7 @@ const MuscleMap = (props) => {
             
             <h2>Muscle Groups</h2>
             <div>
-            <Button id="front" className="frontBackButtons"  variant="outlined" onClick={switchView}s>Front</Button>
+            <Button id="front" className="frontBackButtons"  variant="outlined" onClick={switchView}>Front</Button>
             <Button id="back" className="frontBackButtons" variant="outlined" onClick={switchView}>Back</Button>
             </div>
             {view === 'front' ?
