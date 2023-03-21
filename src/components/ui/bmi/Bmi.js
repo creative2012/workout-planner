@@ -30,10 +30,10 @@ const Bmi = (props) => {
         healthy_bmi_range: ''
 
     }
-    const [params, setParams] = useState({ age: userData.age, weight: userData.weight, height: userData.height })
+    const [params, setParams] = useState({ age: userData.age, weight: userData.weight, height: userData.height})
     const [response, setResponse] = useState(data2);
 
-    const options = {
+    let options = {
         method: 'GET',
         url: 'https://fitness-calculator.p.rapidapi.com/bmi',
         params: params,
@@ -44,6 +44,7 @@ const Bmi = (props) => {
     };
 
     useEffect(() => {
+        console.log(options)
         axios.request(options)
             .then(function (response) {
                 setResponse(response.data.data)
@@ -51,7 +52,7 @@ const Bmi = (props) => {
             }).catch(function (error) {
                 console.error(error);
             });
-    }, [props, params]);
+    }, [params]);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -65,30 +66,24 @@ const Bmi = (props) => {
         
 
         if (age.current.value.length != 0) {
-            data.age = age.current.value;
+            data.age = age.current.value.toString();
             saveToLocalStorage('user', data);
         }
         else if (height.current.value.length != 0) {
-            data.height = height.current.value;
+            data.height = height.current.value.toString();
             saveToLocalStorage('user', data);
         }
         else if (weight.current.value.length != 0) {
-            data.weight = weight.current.value;
+            data.weight = weight.current.value.toString();
+
             saveToLocalStorage('user', data);
         }
+        console.log(data)
         setParams({ age: data.age, weight: data.weight, height: data.height });
         handleClose();
 
     }
-    function getBMIData() {
-        axios.request(options)
-            .then(function (response) {
-                setResponse(response.data.data)
-
-            }).catch(function (error) {
-                console.error(error);
-            });
-    }
+  
 
     return (
         <div>
