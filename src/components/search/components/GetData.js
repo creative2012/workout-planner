@@ -44,7 +44,9 @@ function GetData(props) {
             }}
           >
             <img className="workoutImage"
-              src="./assets/media/abdominals.jpg"
+              src={
+                "./assets/media/"+item.name.replaceALL(" ","_")+".jpg"
+              }
               
               key={item.id}
             ></img>
