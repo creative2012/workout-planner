@@ -12,9 +12,11 @@ import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import { motion } from "framer-motion";
 
 function Exercises() {
+  //react router hook to pass state from search component
   let exercise = useLocation();
   //console.log(exercise.state.id);
   let eName, eType, eMuscle, eEquipment, eInstructions, eYoutube  = "";
+
  
       eName = exercise.state.id;
       eType = capitalizeFirstLetter(exercise.state.type.replace(/_/g," "));
@@ -24,6 +26,7 @@ function Exercises() {
       eYoutube = exercise.state.id.replace(/ /g,"%");
     
   
+
   return (
     <motion.div key="exercises"
     initial={{opacity: 0}}
@@ -33,7 +36,10 @@ function Exercises() {
       <Link key="exercises1"
           to={"/home"}
         >
+
+ {/*Font Awesome component added for the arrow */}
       <Button key="exercises2" className="backButton"><FontAwesomeIcon icon={faArrowLeft}/>&nbsp;&nbsp;Back</Button>
+
       </Link>
       <Grid key="exercises3" container spacing={2} className="exerciseContainer">
         <Grid key="exercises4" item xs={12} md={6} lg={5} className="exerciseGridImage">
@@ -49,13 +55,16 @@ function Exercises() {
           </div>
         </Grid>
         <Grid key="exercises6" item xs={12}>
+        {/*Calling SearchYoutube component to display 3 videos depending on the name of the exercise */}
           <SearchYoutube key="youtube"query={eYoutube + "Gym%Exercise%Technique"} />
+
         </Grid> 
       </Grid>
     </motion.div>
   )
 }
 
+//Function to capitalise first letter for better display of information
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
