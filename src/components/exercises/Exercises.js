@@ -15,28 +15,15 @@ function Exercises() {
   let exercise = useLocation();
   //console.log(exercise.state.id);
   let eName, eType, eMuscle, eEquipment, eInstructions, eYoutube  = "";
-  const options = {
-    headers: { "x-api-key": "UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2" },
-  };
-  const { data, isLoading, error } = useApi(
-    "https://api.api-ninjas.com/v1/exercises?name=" + exercise.state.id,
-    options
-  );
-  if (isLoading) {
-    return <p>Loading....</p>;
-  } else if(error){
-    console.log(error);
-  } else {
-    if(data.length > 0)
-    {
-      eName = data[0].name;
-      eType = capitalizeFirstLetter(data[0].type.replace(/_/g," "));
-      eMuscle = capitalizeFirstLetter(data[0].muscle.replace(/_/g," "));
-      eEquipment = capitalizeFirstLetter(data[0].equipment.replace(/_/g," "));
-      eInstructions = data[0].instructions;
-      eYoutube = data[0].name.replace(/ /g,"%");
-    }
-  }
+ 
+      eName = exercise.state.id;
+      eType = capitalizeFirstLetter(exercise.state.type.replace(/_/g," "));
+      eMuscle = capitalizeFirstLetter(exercise.state.muscle.replace(/_/g," "));
+      eEquipment = capitalizeFirstLetter(exercise.state.equipment.replace(/_/g," "));
+      eInstructions = exercise.state.instructions;
+      eYoutube = exercise.state.id.replace(/ /g,"%");
+    
+  
   return (
     <motion.div key="exercises"
     initial={{opacity: 0}}
