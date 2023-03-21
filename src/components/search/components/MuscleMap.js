@@ -9,6 +9,7 @@ const MuscleMap = (props) => {
   const [view, setView] = useState("front");
 
   const muscleGroupNames = {
+    neck: "neck",
     abdominals: "abdominals",
     upperarms: "biceps",
     chest: "chest",
