@@ -5,6 +5,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Logout from '@mui/icons-material/Logout';
 import { Link } from "react-router-dom";
+import UserSelect from '../../userSelect/UserSelect';
 
 function Profile(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -61,9 +62,9 @@ function Profile(props) {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <Link to={"/"}>
-        <MenuItem onClick={handleClose}>
-          <ListItemIcon onClick={logOut}>
+        <Link to={"/"} element={<UserSelect handleLogin={props.handleLogin} name={props.name}  />}>
+        <MenuItem onClick={logOut}>
+          <ListItemIcon >
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
@@ -74,8 +75,7 @@ function Profile(props) {
   );
 }
 
-const logOut = (event) => {
-    event.preventDefault();
+const logOut = () => {
     localStorage.clear();
 
 };

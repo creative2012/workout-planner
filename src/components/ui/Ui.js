@@ -18,7 +18,6 @@ let userInitial = username.charAt(0);
             transition={{ delay: 0.5, duration: 0.2, ease: "linear"}}
             exit={{opacity: 0, height: 0, transition:{duration: 0.5}}}>
         <div className="headerInnerContainer">
-            {/*<div id="userImage"></div>*/}
             <Profile name={userInitial}/>
             <p>Hello {username}!</p>
         </div>
