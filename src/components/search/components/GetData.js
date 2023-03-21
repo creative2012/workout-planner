@@ -40,8 +40,9 @@ function GetData(props) {
           <div
             style={{
               display: "flex",
-              border: 1 + "px solid Grey",
-              marginBottom: 5 + "px",
+              boxShadow: "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+              marginBottom: 15 + "px",
+              overflow: "hidden"
             }}
           >
             <img className="workoutImage"
