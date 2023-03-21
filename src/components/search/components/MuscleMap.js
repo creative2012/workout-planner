@@ -10,8 +10,8 @@ const MuscleMap = (props) => {
 
   const muscleGroupNames = {
     neck: "neck",
+    abdominals: "abdominals",
 
-    upperarms: "biceps",
     chest: "chest",
     adductors: "shoulders",
     calves: "calves",
