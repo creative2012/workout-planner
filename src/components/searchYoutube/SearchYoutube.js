@@ -18,25 +18,25 @@ function SearchYoutube(props) {
     useEffect(() => {
     axios.request(options)
         .then(function (response) {
-        console.log(response.data.results);
         getResults(response.data.results);
-        console.log(array1);
     }).catch(function (error) {
         console.error(error);
     });
 
     function getResults(data) {
         data.slice(0,3).map((e) => {
-        array1.push({link:"https://www.youtube.com/embed/" + e.id})})
+        
+        array1.push({link:"https://www.youtube.com/embed/" + e.id, id: e.id})})
         setlinkArray(array1);
         }
     }, [query]);
 
     return (
-        <div className="YoutubeVideos">
+        <div className="YoutubeVideos" key="youTubeVids">
               {
                 linkArray.map(item => (
-                    <iframe
+                
+                    <iframe 
                     className="video"
                     width="426"
                     height="240"
@@ -45,6 +45,7 @@ function SearchYoutube(props) {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                     ></iframe>
+              
                 )) 
                }
             </div>

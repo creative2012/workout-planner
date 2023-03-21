@@ -5,10 +5,6 @@ import './ui.css';
 import Bmi from './bmi/Bmi';
 
 const Ui = () => {
-  const [name, setName] = useState('');
-  useEffect(() => {
-    setName(getFromLocalStorage('user').name)
-  },[])
 
   return (
     <motion.div id="headerContainer"
@@ -18,7 +14,7 @@ const Ui = () => {
             exit={{opacity: 0, height: 0, transition:{duration: 0.5}}}>
         <div className="headerInnerContainer">
             <div id="userImage"></div>
-            <p>Hello {name}!</p>
+            <p>Hello {getFromLocalStorage('user').name}!</p>
         </div>
         <div className="headerInnerContainer">
         <Bmi />      

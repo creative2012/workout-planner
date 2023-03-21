@@ -13,11 +13,11 @@ const Bmi = (props) => {
 
     }
     const [response, setResponse] = useState(data2);
-    const [userData, setUserData] = useState(getFromLocalStorage('user'));
+    const userData= getFromLocalStorage('user');
     const options = {
         method: 'GET',
         url: 'https://fitness-calculator.p.rapidapi.com/bmi',
-        params: { age: '41', weight: '80', height: '180' },
+        params: { age: userData.age, weight: userData.weight, height: userData.height },
         headers: {
             'X-RapidAPI-Key': '1878354580msh8b369f3fa728c53p1abe74jsncda9f6dbfe87',
             'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
@@ -27,7 +27,6 @@ const Bmi = (props) => {
     useEffect(() => {
         axios.request(options)
             .then(function (response) {
-                console.log(response.data.data)
                 setResponse(response.data.data)
 
             }).catch(function (error) {
