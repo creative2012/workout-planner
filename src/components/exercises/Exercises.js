@@ -12,47 +12,40 @@ import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 import { motion } from "framer-motion";
 
 function Exercises() {
+  //react router hook to pass state from search component
   let exercise = useLocation();
   //console.log(exercise.state.id);
   let eName, eType, eMuscle, eEquipment, eInstructions, eYoutube  = "";
-  const options = {
-    headers: { "x-api-key": "UZjs8Cbxc5w9apyoeQoHkw==WvbVw7sr6wacZCG2" },
-  };
-  const { data, isLoading, error } = useApi(
-    "https://api.api-ninjas.com/v1/exercises?name=" + exercise.state.id,
-    options
-  );
-  if (isLoading) {
-    return <p>Loading....</p>;
-  } else if(error){
-    console.log(error);
-  } else {
-    if(data.length > 0)
-    {
-      eName = data[0].name;
-      eType = capitalizeFirstLetter(data[0].type.replace(/_/g," "));
-      eMuscle = capitalizeFirstLetter(data[0].muscle.replace(/_/g," "));
-      eEquipment = capitalizeFirstLetter(data[0].equipment.replace(/_/g," "));
-      eInstructions = data[0].instructions;
-      eYoutube = data[0].name.replace(/ /g,"%");
-    }
-  }
+
+ 
+      eName = exercise.state.id;
+      eType = capitalizeFirstLetter(exercise.state.type.replace(/_/g," "));
+      eMuscle = capitalizeFirstLetter(exercise.state.muscle.replace(/_/g," "));
+      eEquipment = capitalizeFirstLetter(exercise.state.equipment.replace(/_/g," "));
+      eInstructions = exercise.state.instructions;
+      eYoutube = exercise.state.id.replace(/ /g,"%");
+    
+  
+
   return (
     <motion.div key="exercises"
     initial={{opacity: 0}}
         animate={{opacity: 1}}
-        transition={{ delay: 0, duration: 0.2, ease: "linear"}}
+        transition={{  delay: 1, duration: 0.5, ease: "linear"}}
         exit={{opacity: 0, transition:{duration: 0.5}}}>
-      <Link
+      <Link key="exercises1"
           to={"/home"}
         >
-      <Button className="backButton"><FontAwesomeIcon icon={faArrowLeft}/>&nbsp;&nbsp;Back</Button>
+
+ {/*Font Awesome component added for the arrow */}
+      <Button key="exercises2" className="backButton"><FontAwesomeIcon icon={faArrowLeft}/>&nbsp;&nbsp;Back</Button>
+
       </Link>
-      <Grid container spacing={2} className="exerciseContainer">
-        <Grid item xs={12} md={6} lg={5} className="exerciseGridImage">
+      <Grid key="exercises3" container spacing={2} className="exerciseContainer">
+        <Grid key="exercises4" item xs={12} md={6} lg={5} className="exerciseGridImage">
           <img className='exerciseImage' src={placeholder} alt="Placeholder"></img>
         </Grid>
-        <Grid item xs={12} md={6} lg={7}>
+        <Grid key="exercises5" item xs={12} md={6} lg={7}>
           <div className="exerciseGridDetails">
             <h1>Name: {eName}</h1>
             <h2>Type: {eType}</h2>
@@ -61,14 +54,17 @@ function Exercises() {
             <h3>Instructions: {eInstructions}</h3>
           </div>
         </Grid>
-        <Grid item xs={12}>
-          <SearchYoutube query={eYoutube + "Gym%Exercise%Technique"} />
+        <Grid key="exercises6" item xs={12}>
+        {/*Calling SearchYoutube component to display 3 videos depending on the name of the exercise */}
+          <SearchYoutube key="youtube"query={eYoutube + "Gym%Exercise%Technique"} />
+
         </Grid> 
       </Grid>
     </motion.div>
   )
 }
 
+//Function to capitalise first letter for better display of information
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }

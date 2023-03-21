@@ -32,18 +32,28 @@ const MuscleMap = (props) => {
     const toView = e.target.id;
     setView(toView);
   };
-
   return (
     <div id="muscleMan" style={{ height: 600 + "px", width: 300 + "px" }}>
       <h2>Muscle Groups</h2>
       <div>
-        <button id="front" onClick={switchView}>
+        <Button
+          id="front"
+          className="frontBackButtons"
+          variant="outlined"
+          onClick={switchView}
+        >
           Front
-        </button>
-        <button onClick={switchView} id="back">
+        </Button>
+        <Button
+          id="back"
+          className="frontBackButtons"
+          variant="outlined"
+          onClick={switchView}
+        >
           Back
-        </button>
+        </Button>
       </div>
+
       {view === "front" ? (
         <svg
           version="1.0"

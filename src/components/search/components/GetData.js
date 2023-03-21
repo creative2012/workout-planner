@@ -18,9 +18,7 @@ function GetData(props) {
     return <div style={{marginTop: 100+'px',display:'flex', alignItems: 'center', justifyContent:'center'}}> <CircularProgress /></div>;
   } 
   function showResult(item) {
-
     return (
-
       <motion.div key={item.name}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -31,6 +29,11 @@ function GetData(props) {
           className="searchLink"
           state={{
             id: item.name,
+            type: item.type,
+            muscle: item.muscle,
+            equipment: item.equipment,
+            instructions: item.instructions,
+
           }}
         >
           <div
@@ -67,20 +70,14 @@ function GetData(props) {
         </Link>
       </motion.div>
     )
-
-
   }
   return (
     <AnimatePresence>
       <div key="searchResults" className="searchBox">
         {
-
           data.map((item) => {
             return showResult(item);
-
           })
-
-
         }
       </div>
     </AnimatePresence>
