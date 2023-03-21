@@ -65,8 +65,6 @@ const UserSelect = (props) => {
             },50);
             navigate("/home");
         } 
-
-
     }
     //handle login if user profile exists
     const login = () => {
@@ -104,7 +102,7 @@ const UserSelect = (props) => {
                             type="text"
                             variant="outlined"
                             sx={{  width: '100%',
-                            /*Overriding the syle of Material UI textfield*/
+                            /*Overriding the style of Material UI textfield*/
                             "& .MuiInputLabel-root": {color: 'black'},
                             "& .MuiOutlinedInput-root.Mui-focused": {
                               "& > fieldset": { color: 'black!important', borderColor: "black" },
@@ -214,6 +212,5 @@ const UserSelect = (props) => {
         </motion.div>
     )
 }
-
 
 export default UserSelect
