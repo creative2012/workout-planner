@@ -2,9 +2,7 @@ import React from 'react';
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import './exercises.css';
-import useApi from '../utils/Api';
 import SearchYoutube from '../searchYoutube/SearchYoutube';
-import placeholder from '../../assets/media/placeholder-image.jpg';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -42,7 +40,7 @@ function Exercises() {
       <Grid key="exercises3" container spacing={1} className="exerciseContainer">
         
         <Grid key="exercises4" item xs={12} md={6} lg={5} className="exerciseGridImage">
-          <img className='exerciseImage' src={placeholder} alt="Placeholder"></img>
+          <img className='exerciseImage' src={exercise.state.img} alt="Placeholder"></img>
           <div className="exerciseGridDetails">
             
             <h2>Type: <span>{eType}</span></h2>

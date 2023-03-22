@@ -26,7 +26,7 @@
 .backButton{
     position: fixed!important;
     top: 23px!important;
-    right: 190px!important;
+    right: 250px!important;
     color: rgb(252, 252, 252)!important;
     z-index: 100;
 }
@@ -36,5 +36,14 @@
 }
 .exerciseGridDetails span{
     font-weight: normal;
-   
 }
+
+@media only screen and (max-width: 600px) {
+    .backButton{
+        position: fixed!important;
+        top: 80px!important;
+        right: 400px!important;
+        color: black!important;
+        z-index: 100;
+    }
+  }
