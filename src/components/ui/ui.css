@@ -27,9 +27,13 @@
     cursor: pointer;
 }
 
+.logoutButton{
+    color: black!important;
+    text-decoration: none!important;
+}
+
 #headerContainer p {
     margin: 0 10px;
-
 }
 
 .headerInnerContainer {
@@ -40,11 +44,8 @@
 
 .headerInnerContainer ul {
     list-style: none;
-
 }
 
 .headerInnerContainer ul li {
     display: inline;
-
-
 }
