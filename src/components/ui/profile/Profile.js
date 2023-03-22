@@ -20,6 +20,7 @@ function Profile(props) {
   const logOut = () => {
     localStorage.clear();
     navigate("/");
+    window.location.reload(false);
 };
 
   return (
