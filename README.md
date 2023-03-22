@@ -18,16 +18,17 @@ FitPlan is more than just an exercise app. It's a community of like-minded indiv
 ## User Story
 
 User Story: As a user, I want to calculate my BMI and the type of workout I want to do so that I can find the best workout for me.
-
 As a user, I want to browse through the workout options and select the one that best suits my needs.
+As a user, I want to follow the instructions or watch the video to complete the workout.
 
 ## Acceptance Criteria:
 
 The app should have clear and concise guide for BMI calculation.
 The app should have clear and concise options for the type of workout after clicking on the part of my body that I want to work on.
 The user should be able to easily select their preferred options and move on to the next step.
-The app should provide a clear and concise list of workout options based on the user's fitness level, workout type, and available equipment.
+The app should provide a clear and concise list of workout options based on the user's BMI, workout type, and muscles.
 The user should be able to easily browse through the workout options and view details such as workout length, difficulty level, and target areas.
+The app should provide clear and concise instructions or a video demonstration for each workout.
 The user should be able to select the workout they want and move on to the next step.
 
 ### How to use FitPlan
@@ -40,16 +41,4 @@ The user should be able to select the workout they want and move on to the next 
 - Follow the instructions or watch the video to complete the workout.
 - Log your progress and share your achievements with the FitPlan community. (feature not yet implemented)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
+### Steps in pictures
