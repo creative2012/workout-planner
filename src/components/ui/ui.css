@@ -17,11 +17,9 @@
     
 }
 
-#userImage {
-    height: 45px;
-    width: 45px;
-    border-radius: 5rem;
-    background-color: white;
+.userImage {
+    background-color: yellow!important;
+    color: black!important;
 }
 
 #headerContainer p {
