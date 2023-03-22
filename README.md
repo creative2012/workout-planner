@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Getting to know our FitPlan...A simple introduction and the motivation behind it
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Introducing "FitPlan," the revolutionary exercise app that will change the way you approach fitness forever!
 
-## Available Scripts
+Are you tired of aimlessly scrolling through countless workout videos, hoping to find one that which suits your needs? Do you feel lost and overwhelmed in the sea of endless exercise options? We understand your struggle, and that's why we created FitPlan.
 
-In the project directory, you can run:
+Imagine waking up in the morning, feeling energized and ready to tackle the day. You open up the app and are immediately greeted with a warm, inviting interface that encourages you to find the perfect exercise for your body and mood.
 
-### `npm start`
+With FitPlan, you can search for exercises based on your BMI, fitness level, workout type, and even the specific muscle interested in building. Whether you're in the mood for a high-intensity cardio session or a simple anerobics, we've got you covered.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+But FitPlan isn't just about finding the perfect workout. It's about connecting with your body, mind, and spirit in a way that brings you joy and fulfillment. We believe that fitness should be a journey of self-discovery, and we're here to guide you every step of the way.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Picture yourself standing in a lush, green park, surrounded by nature and fresh air. You open up FitPlan and choose a guided exercise that helps you get an effective bodyweight workout that leaves you feeling strong and confident.
 
-### `npm test`
+FitPlan is more than just an exercise app. It's a community of like-minded individuals who are passionate about living their best lives. Join us on this journey towards health, happiness, and self-discovery. Click on the link today and start your transformation!
+[FitPlan app](https://ephemeral-duckanoo-b75bcb.netlify.app/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Developers
 
-### `npm run build`
+Paul Morris,
+Onanike Obinna,
+Khyle FLores and
+Charles Ohanyere
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## User Story
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- As a user, I want to calculate my BMI and search the type of workout I want to do so that I can find the best workout for me.
+- As a user, I want to browse through the workout options and select the one that best suits my needs.
+- As a user, I want to follow the instructions or watch the video to complete the workout.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acceptance Criteria:
 
-### `npm run eject`
+- The app should have clear and concise guide for BMI calculation.
+- The app should have clear and concise options for the type of workout after clicking on the part of my body that I want to work on.
+- The user should be able to easily select their preferred options and move on to the next step.
+- The app should provide a clear and concise list of workout options based on the user's BMI, workout type, and muscles.
+- The user should be able to easily browse through the workout options and view details such as workout length, difficulty level, and target areas.
+- The app should provide clear and concise instructions or a video demonstration for each workout.
+- The user should be able to select the workout they want and move on to the next step.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## How to use FitPlan
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Go to [FitPlan app](https://ephemeral-duckanoo-b75bcb.netlify.app/).
+- Click on the animated circle below create my profile
+- Input your details (name weight, height.), click on login
+- Select the muscle or the part of your body you want exercise
+- Browse through the workout options and select the one that best suits your needs.
+- Follow the instructions or watch the video to complete the workout.
+- Log your progress and share your achievements with the FitPlan community. (feature not yet implemented)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Steps in pictures
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Step one ![first appflow](/public/assets/media/Pageone.jpg)
 
-## Learn More
+### Step two ![second appflow](/public/assets/media/Flowtwo.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Step three ![third appflow](/public/assets/media/Floowthree.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Step four ![fourth appflow](/public/assets/media/Flowfour.png)
 
-### Code Splitting
+## Future Development plans in 2 years
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Personalised Account:
 
-### Analyzing the Bundle Size
+In the future development, we will consider having an app where users can have a personalised account, track their goals, monitor their progress, get email tips on new exercise added to the app library, connect with friends who have same goal or in same area.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Social Interaction:
 
-### Making a Progressive Web App
+we already know that no man is an island. So we will be incorporating a feature where our registered members will be able to make friends who have same intention like theirs which will help them motivate each other, chat each other, offer tips on what work best for them
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Goal Oriented features:
 
-### Advanced Configuration
+Time management have shown to help humans to be more productive especially when a time frame is used in every single goal. Our app will also come with calendar to help monitor both short term and long term goals. Example is a 7 day exercise planner
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### User feedback and ratings:
 
-### Deployment
+Improvement is a must in whatever that will last. For that reason we will allow users to give feedback on what they will like to be added or removed from the app. Users will also be allowed to give ratings to our exercise programs that worked well for them
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## copyrights
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+GYMHEAD team members
