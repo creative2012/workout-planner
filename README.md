@@ -43,4 +43,17 @@ The user should be able to select the workout they want and move on to the next 
 
 ### Steps in pictures
 
-## Step one [![first appflow](../public/assets/media/Pageone.jpg)]
+## Step one [![first appflow](/public/assets/media/Pageone.jpg)]
+
+## Step two [![second appflow](/public/assets/media/Flowtwo.png)]
+
+## Step three [![third appflow](/public/assets/media/Floowthree.png)]
+
+## Step four [![fourth appflow](/public/assets/media/Flowfour.png)]
+
+### Designers
+
+Paul Morris
+Onanike Obinna
+Khyle FLores
+Charles On
