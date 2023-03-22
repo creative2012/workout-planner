@@ -124,7 +124,7 @@ const Bmi = (props) => {
                             inputRef={height}
                             required={true}
                             autoFocus
-                            label={'Weight: ' +userData.height}
+                            label={'Height: ' +userData.height}
                             className="loginTextFields"
                             margin="dense"
                             id="height"
@@ -145,7 +145,7 @@ const Bmi = (props) => {
                             inputRef={weight}
                             required={true}
                             autoFocus
-                            label={'Height: ' +userData.weight}
+                            label={'Weight: ' +userData.weight}
                             className="loginTextFields"
                             margin="dense"
                             id="weight"
