@@ -4,9 +4,6 @@ import { motion } from "framer-motion";
 import './ui.css';
 import Bmi from './bmi/Bmi';
 import Profile from './profile/Profile';
-import Avatar from '@mui/material/Avatar';
-import { yellow } from '@mui/material/colors';
-import { Button } from '@mui/material';
 
 const Ui = () => {
 let username = getFromLocalStorage('user').name;

@@ -70,7 +70,6 @@ function Profile(props) {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        {/*<Link to={"/"} element={<UserSelect handleLogin={props.handleLogin} name={props.name}  />}*/}
         <MenuItem onClick={logOut}>
           <ListItemIcon >
             <Logout fontSize="small" />

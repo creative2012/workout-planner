@@ -18,15 +18,12 @@ function Exercises() {
   //console.log(exercise.state.id);
   let eName, eType, eMuscle, eEquipment, eInstructions, eYoutube = "";
 
-
   eName = exercise.state.id;
   eType = capitalizeFirstLetter(exercise.state.type.replace(/_/g, " "));
   eMuscle = capitalizeFirstLetter(exercise.state.muscle.replace(/_/g, " "));
   eEquipment = capitalizeFirstLetter(exercise.state.equipment.replace(/_/g, " "));
   eInstructions = exercise.state.instructions;
   eYoutube = exercise.state.id.replace(/ /g, "%");
-
-
 
   return (
     <motion.div key="exercises"

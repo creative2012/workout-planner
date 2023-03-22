@@ -29,7 +29,6 @@
 
 #headerContainer p {
     margin: 0 10px;
-
 }
 
 .headerInnerContainer {
@@ -40,11 +39,8 @@
 
 .headerInnerContainer ul {
     list-style: none;
-
 }
 
 .headerInnerContainer ul li {
     display: inline;
-
-
 }
