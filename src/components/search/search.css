@@ -1,10 +1,11 @@
 #searchContainer{
-    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #4e4e4e09 10px), repeating-linear-gradient(#f0f0f023, #eeeded56);
+    /* background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #4e4e4e09 10px), repeating-linear-gradient(#f0f0f023, #eeeded56); */
     min-height: calc(100vh - 80px);
     padding-top: 80px;
     display: grid;
     grid-template-columns: auto 3fr 1fr;
     grid-template-areas: 'muscle searchResults .';
+    
 }
 #searchResults{
     grid-area: searchResults;
@@ -13,8 +14,8 @@
     padding-left: 20px;
     min-height: calc(100vh - 100px);
     overflow: hidden;
-    background-color: rgb(241, 239, 239);
-    
+    background-color: rgb(250, 248, 248);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 #SearchBoxes{
     padding-right: 20px;
@@ -53,6 +54,7 @@
 }
 #searchResults{
     width: calc(100% - 40px);
+    padding-right: 20px;
     
 }
 #searchResults{
