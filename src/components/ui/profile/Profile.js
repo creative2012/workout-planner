@@ -1,14 +1,15 @@
-import * as React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Logout from '@mui/icons-material/Logout';
-import { Link } from "react-router-dom";
-import UserSelect from '../../userSelect/UserSelect';
 
 function Profile(props) {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  //useNavigate to redirect back to login page
+  const navigate = useNavigate();
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -16,18 +17,25 @@ function Profile(props) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const logOut = () => {
+    localStorage.clear();
+    navigate("/");
+    window.location.reload(false);
+  };
+
   return (
     <div>
-          <Avatar className="userImage"
-            onClick={handleClick}
-            size="small"
-            sx={{ ml: 2 }}
-            aria-controls={open ? 'account-menu' : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
-          >
-            {props.name}
-          </Avatar>
+      <Avatar className="userImage"
+        onClick={handleClick}
+        size="small"
+        sx={{ ml: 2 }}
+        aria-controls={open ? 'account-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+      >
+        {props.name}
+      </Avatar>
       <Menu
         anchorEl={anchorEl}
         open={open}
@@ -62,22 +70,16 @@ function Profile(props) {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <Link to={"/"} element={<UserSelect handleLogin={props.handleLogin} name={props.name}  />}>
+        {/*<Link to={"/"} element={<UserSelect handleLogin={props.handleLogin} name={props.name}  />}*/}
         <MenuItem onClick={logOut}>
           <ListItemIcon >
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout
         </MenuItem>
-        </Link>
       </Menu>
     </div>
   );
 }
-
-const logOut = () => {
-    localStorage.clear();
-
-};
 
 export default Profile
