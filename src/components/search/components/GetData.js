@@ -57,12 +57,13 @@ function GetData(props) {
               className="searchDetail"
               style={{
                 padding: 20 + "px",
-                height: 80 + "px",
+                height: 160 + "px",
                 width: 100 + "%",
               }}
               key={item.id}
             >
               <h4 className="title">{item.name}</h4>
+              <div></div>
               <div className="diff">
                 <b>Level:</b> {item.difficulty} <br/>
                 <Rating name="read-only" value={item.difficulty === 'beginner' ? 1 : 3} readOnly />

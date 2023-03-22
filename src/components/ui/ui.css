@@ -1,6 +1,5 @@
-
 #headerContainer {
-    position:fixed;
+    position: fixed;
     right: 0;
     left: 0;
     margin-bottom: 80px;
@@ -14,7 +13,12 @@
     color: white;
     white-space: nowrap;
     z-index: 2;
-    
+    background-color: #2c2c2c;
+    opacity: 1;
+    background-image: linear-gradient(#323233 2px, transparent 2px), linear-gradient(90deg, #323233 2px, transparent 2px), linear-gradient(#323233 1px, transparent 1px), linear-gradient(90deg, #323233 1px, #2c2c2c 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .userImage {
@@ -24,7 +28,7 @@
 
 #headerContainer p {
     margin: 0 10px;
-    
+
 }
 
 .headerInnerContainer {
@@ -32,12 +36,14 @@
     flex-direction: row;
     align-items: center;
 }
-.headerInnerContainer ul{
+
+.headerInnerContainer ul {
     list-style: none;
-    
+
 }
-.headerInnerContainer ul li{
+
+.headerInnerContainer ul li {
     display: inline;
-   
-    
+
+
 }

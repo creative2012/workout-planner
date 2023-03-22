@@ -23,6 +23,7 @@ const MuscleMap = (props) => {
     hamstrings: "hamstrings",
     glutes: "glutes",
     forearms: "forearms",
+    lower_back: "Lower_back"
   };
   const clickedMuscleGroup = (e) => {
     const clickedGroup = e.target.className.baseVal;
@@ -562,19 +563,19 @@ const MuscleMap = (props) => {
             <g
               onClick={clickedMuscleGroup}
               className={`muscle_group ${
-                muscleGroups.primary === muscleGroupNames.triceps
+                muscleGroups.primary === muscleGroupNames.lower_back
                   ? "active"
                   : "inactive"
               }`}
             >
               <path
-                className={muscleGroupNames.triceps}
+                className={muscleGroupNames.lower_back}
                 d="M2104 6219 c-81 -131 -280 -640 -286 -730 l-3 -42 100 -64 c55 -35
                             109 -68 121 -72 11 -5 38 -21 59 -36 l40 -26 7 28 c28 98 26 615 -3 829 -14
                             108 -22 134 -35 113z"
               />
               <path
-                className={muscleGroupNames.triceps}
+                className={muscleGroupNames.lower_back}
                 d="M2306 6222 c-20 -33 -46 -354 -46 -582 0 -159 15 -370 28 -382 6 -6
                             36 11 245 139 72 45 77 50 77 82 0 68 -133 422 -244 650 -51 105 -52 106 -60
                             93z"
