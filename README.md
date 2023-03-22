@@ -63,3 +63,11 @@ The user should be able to select the workout they want and move on to the next 
 ## Personalised Account:
 
 In the future development, we will consider having an app where users can have a personalised account, track their goals, monitor their progress, get email tips on new exercise added to the app library, connect with friends who have same goal or in same area.
+
+## Social Interaction:
+
+we already know that no man is an island. So we will be incorporating a feature where our registered members will be able to make friends who have same intention like theirs which will help them motivate each other, chat each other, offer tips on what work best for them
+
+## Goal Oriented features:
+
+Time management have shown to help humans to be more productive especially when a time frame is used in every single goal. Our app will also come with calendar to help monitor both short term and long term goals. Example is a 7 day exercise planner
