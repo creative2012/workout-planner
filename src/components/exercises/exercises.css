@@ -24,7 +24,7 @@
 
 
 .backButton{
-    position: absolute!important;
+    position: fixed!important;
     top: 23px!important;
     right: 190px!important;
     color: rgb(252, 252, 252)!important;
