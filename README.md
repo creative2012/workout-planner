@@ -17,28 +17,28 @@ FitPlan is more than just an exercise app. It's a community of like-minded indiv
 
 ## User Story
 
-In the project directory, you can run:
+User Story: As a user, I want to calculate my BMI and the type of workout I want to do so that I can find the best workout for me.
+
+As a user, I want to browse through the workout options and select the one that best suits my needs.
+
+## Acceptance Criteria:
+
+The app should have clear and concise guide for BMI calculation.
+The app should have clear and concise options for the type of workout after clicking on the part of my body that I want to work on.
+The user should be able to easily select their preferred options and move on to the next step.
+The app should provide a clear and concise list of workout options based on the user's fitness level, workout type, and available equipment.
+The user should be able to easily browse through the workout options and view details such as workout length, difficulty level, and target areas.
+The user should be able to select the workout they want and move on to the next step.
 
 ### How to use FitPlan
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Go to [FitPlan app](https://ephemeral-duckanoo-b75bcb.netlify.app/).
+- Click on the animated circle below create my profile
+- Input your details (name weight, height.), click on login
+- Select the muscle or the part of your body you want exercise
+- Browse through the workout options and select the one that best suits your needs.
+- Follow the instructions or watch the video to complete the workout.
+- Log your progress and share your achievements with the FitPlan community. (feature not yet implemented)
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
@@ -53,31 +53,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
