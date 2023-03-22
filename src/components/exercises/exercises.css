@@ -25,12 +25,14 @@
 
 .backButton{
     position: absolute!important;
-    top: 90px!important;
-    right: 20px!important;
-    color: black!important;
+    top: 23px!important;
+    right: 190px!important;
+    color: rgb(252, 252, 252)!important;
+    z-index: 100;
 }
 .backButton:hover{
     background-color: yellow!important;
+    color: rgb(0, 0, 0)!important;
 }
 .exerciseGridDetails span{
     font-weight: normal;
