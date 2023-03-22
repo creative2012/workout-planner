@@ -91,7 +91,13 @@ const Bmi = (props) => {
                 <div className='smallTitle'>{response.bmi} <span>Your BMI</span></div>
                 <div className='smallTitle'>{response.health} <span>Your Health</span></div>
             </div>
-            <Dialog open={open} onClose={handleClose}>
+            <Dialog open={open} onClose={handleClose}
+            PaperProps={{
+                style: {
+                    backdropFilter: "blur(5px)",
+                    color: 'white'
+                },
+                }}>
                 <DialogContent>
                     <DialogTitle>Update BMI data</DialogTitle>
 
@@ -160,8 +166,8 @@ const Bmi = (props) => {
 
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleClose}>Cancel</Button>
-                    <Button onClick={handleUpdate}>Update</Button>
+                    <Button className="loginButtonFields" onClick={handleClose}>Cancel</Button>
+                    <Button className="loginButtonFields"  onClick={handleUpdate}>Update</Button>
                 </DialogActions>
             </Dialog>
         </div >
