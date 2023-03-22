@@ -6,7 +6,7 @@ Are you tired of aimlessly scrolling through countless workout videos, hoping to
 
 Imagine waking up in the morning, feeling energized and ready to tackle the day. You open up the app and are immediately greeted with a warm, inviting interface that encourages you to find the perfect exercise for your body and mood.
 
-With FitPlan, you can search for exercises based on your BMI, fitness level, workout type, and even the specific muscle interested in building. Whether you're in the mood for a high-intensity cardio session or a relaxing yoga flow, we've got you covered.
+With FitPlan, you can search for exercises based on your BMI, fitness level, workout type, and even the specific muscle interested in building. Whether you're in the mood for a high-intensity cardio session or a simple anerobics, we've got you covered.
 
 But FitPlan isn't just about finding the perfect workout. It's about connecting with your body, mind, and spirit in a way that brings you joy and fulfillment. We believe that fitness should be a journey of self-discovery, and we're here to guide you every step of the way.
 
@@ -75,3 +75,7 @@ Time management have shown to help humans to be more productive especially when 
 ### User feedback and ratings:
 
 Improvement is a must in whatever that will last. For that reason we will allow users to give feedback on what they will like to be added or removed from the app. Users will also be allowed to give ratings to our exercise programs that worked well for them
+
+## copyrights
+
+GYMHEAD team members
