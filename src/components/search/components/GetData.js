@@ -34,6 +34,7 @@ function GetData(props) {
             muscle: item.muscle,
             equipment: item.equipment,
             instructions: item.instructions,
+            img: "./assets/media/"+item.name.replaceAll(" ","_").replaceAll("/","_")+".jpg"
 
           }}
         >
