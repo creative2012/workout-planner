@@ -79,17 +79,15 @@ const UserSelect = (props) => {
         initial={{opacity: 1}}
         exit={{opacity: 0, transition:{duration: 0.5}}}>
             <div id="splashBg" >
-                <Dialog open={open} onClose={handleClose} 
+                <Dialog  open={open} onClose={handleClose} 
                 PaperProps={{
                 style: {
-                backgroundColor: '#ffff33',
+                    backdropFilter: "blur(5px)",
+                    color: 'white'
                 },
                 }}>
                     <DialogTitle className="loginFont">START TRAINING TODAY</DialogTitle>
                     <DialogContent>
-                        <DialogContentText>
-                            Please fill in the details below.
-                        </DialogContentText>
                         <div>
                         <TextField
                             required={true}

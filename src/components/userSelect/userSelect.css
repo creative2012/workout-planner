@@ -121,3 +121,21 @@
     font-size: 13px;
     font-weight: normal;
 }
+.MuiPaper-root{
+    background-color: rgba(255, 255, 255, 0.288) !important;
+}
+.MuiDialogActions-root {
+    background-color: #fbff03d4;
+}
+.loginButtonFields:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
