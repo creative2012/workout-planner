@@ -15,7 +15,7 @@ Picture yourself standing in a lush, green park, surrounded by nature and fresh 
 FitPlan is more than just an exercise app. It's a community of like-minded individuals who are passionate about living their best lives. Join us on this journey towards health, happiness, and self-discovery. Click on the link today and start your transformation!
 [FitPlan app](https://ephemeral-duckanoo-b75bcb.netlify.app/).
 
-## Designers
+## Developers
 
 Paul Morris,
 Onanike Obinna,
@@ -24,7 +24,7 @@ Charles Ohanyere
 
 ## User Story
 
-User Story: As a user, I want to calculate my BMI and the type of workout I want to do so that I can find the best workout for me.
+User Story: As a user, I want to calculate my BMI and search the type of workout I want to do so that I can find the best workout for me.
 As a user, I want to browse through the workout options and select the one that best suits my needs.
 As a user, I want to follow the instructions or watch the video to complete the workout.
 
