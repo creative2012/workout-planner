@@ -70,7 +70,7 @@ function Profile(props) {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem onClick={logOut}>
+        <MenuItem className='logoutButton' onClick={logOut}>
           <ListItemIcon >
             <Logout fontSize="small" />
           </ListItemIcon>

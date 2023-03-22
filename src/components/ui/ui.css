@@ -27,6 +27,11 @@
     cursor: pointer;
 }
 
+.logoutButton{
+    color: black!important;
+    text-decoration: none!important;
+}
+
 #headerContainer p {
     margin: 0 10px;
 }
