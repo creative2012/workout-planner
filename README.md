@@ -15,7 +15,7 @@ Picture yourself standing in a lush, green park, surrounded by nature and fresh 
 FitPlan is more than just an exercise app. It's a community of like-minded individuals who are passionate about living their best lives. Join us on this journey towards health, happiness, and self-discovery. Click on the link today and start your transformation!
 [FitPlan app](https://ephemeral-duckanoo-b75bcb.netlify.app/).
 
-### Designers
+## Designers
 
 Paul Morris
 Onanike Obinna
@@ -38,7 +38,7 @@ The user should be able to easily browse through the workout options and view de
 The app should provide clear and concise instructions or a video demonstration for each workout.
 The user should be able to select the workout they want and move on to the next step.
 
-### How to use FitPlan
+## How to use FitPlan
 
 - Go to [FitPlan app](https://ephemeral-duckanoo-b75bcb.netlify.app/).
 - Click on the animated circle below create my profile
@@ -48,26 +48,30 @@ The user should be able to select the workout they want and move on to the next 
 - Follow the instructions or watch the video to complete the workout.
 - Log your progress and share your achievements with the FitPlan community. (feature not yet implemented)
 
-### Steps in pictures
+## Steps in pictures
 
-## Step one [![first appflow](/public/assets/media/Pageone.jpg)]
+### Step one [![first appflow](/public/assets/media/Pageone.jpg)]
 
-## Step two [![second appflow](/public/assets/media/Flowtwo.png)]
+### Step two [![second appflow](/public/assets/media/Flowtwo.png)]
 
-## Step three [![third appflow](/public/assets/media/Floowthree.png)]
+### Step three [![third appflow](/public/assets/media/Floowthree.png)]
 
-## Step four [![fourth appflow](/public/assets/media/Flowfour.png)]
+### Step four [![fourth appflow](/public/assets/media/Flowfour.png)]
 
-### Future Development plans in 2 years
+## Future Development plans in 2 years
 
-## Personalised Account:
+### Personalised Account:
 
 In the future development, we will consider having an app where users can have a personalised account, track their goals, monitor their progress, get email tips on new exercise added to the app library, connect with friends who have same goal or in same area.
 
-## Social Interaction:
+### Social Interaction:
 
 we already know that no man is an island. So we will be incorporating a feature where our registered members will be able to make friends who have same intention like theirs which will help them motivate each other, chat each other, offer tips on what work best for them
 
-## Goal Oriented features:
+### Goal Oriented features:
 
 Time management have shown to help humans to be more productive especially when a time frame is used in every single goal. Our app will also come with calendar to help monitor both short term and long term goals. Example is a 7 day exercise planner
+
+### User feedback and ratings:
+
+Improvement is a must in whatever that will last. For that reason we will allow users to give feedback on what they will like to be added or removed from the app. Users will also be allowed to give ratings to our exercise programs that worked well for them
