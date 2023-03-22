@@ -139,3 +139,7 @@
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
 }
+label{
+    background-color: white;
+    padding: 5px;
+}
