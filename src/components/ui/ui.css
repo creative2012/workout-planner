@@ -20,6 +20,7 @@
 .userImage {
     background-color: yellow!important;
     color: black!important;
+    cursor: pointer;
 }
 
 #headerContainer p {
