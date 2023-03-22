@@ -124,6 +124,10 @@
 .MuiPaper-root{
     background-color: rgba(255, 255, 255, 0.288) !important;
 }
+li, ul{
+    background-color: rgb(255, 255, 255)!important;
+    
+}
 .MuiDialogActions-root {
     background-color: #fbff03d4;
 }
