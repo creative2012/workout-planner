@@ -1,12 +1,25 @@
-# Getting to know our workout Planner
+# Getting to know our FitPlan...A simple introduction and the motivation behind it
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Introducing "FitPlan," the revolutionary exercise app that will change the way you approach fitness forever!
 
-## Available Scripts
+Are you tired of aimlessly scrolling through countless workout videos, hoping to find one that which suits your needs? Do you feel lost and overwhelmed in the sea of endless exercise options? We understand your struggle, and that's why we created FitPlan.
+
+Imagine waking up in the morning, feeling energized and ready to tackle the day. You open up the app and are immediately greeted with a warm, inviting interface that encourages you to find the perfect exercise for your body and mood.
+
+With FitPlan, you can search for exercises based on your BMI, fitness level, workout type, and even the specific muscle interested in building. Whether you're in the mood for a high-intensity cardio session or a relaxing yoga flow, we've got you covered.
+
+But FitPlan isn't just about finding the perfect workout. It's about connecting with your body, mind, and spirit in a way that brings you joy and fulfillment. We believe that fitness should be a journey of self-discovery, and we're here to guide you every step of the way.
+
+Picture yourself standing in a lush, green park, surrounded by nature and fresh air. You open up FitPlan and choose a guided exercise that helps you get an effective bodyweight workout that leaves you feeling strong and confident.
+
+FitPlan is more than just an exercise app. It's a community of like-minded individuals who are passionate about living their best lives. Join us on this journey towards health, happiness, and self-discovery. Click on the link today and start your transformation!
+[FitPlan app](https://ephemeral-duckanoo-b75bcb.netlify.app/).
+
+## User Story
 
 In the project directory, you can run:
 
-### `npm start`
+### How to use FitPlan
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
