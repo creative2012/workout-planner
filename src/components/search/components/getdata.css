@@ -3,28 +3,29 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
-    "title title title"
+    "titled titled titled"
     ". . ."
-    "diff . type";
-    
+    "diffd . typed";
 }
 .title {
-  grid-area: title;
+  grid-area: titled;
   margin-top: 40px;
 }
 .diff {
-  grid-area: diff;
+  grid-area: diffd;
+ 
   font-size: 12px;
-  margin-top: 50px;
+  
 }
 .type {
-  grid-area: type;
+  grid-area: typed;
+
   padding-left: 10px;
   font-size: 12px;
-  margin-top: 50px;
+
 }
 h4 {
-  line-height: 14px;
+  line-height: 19px;
   font-size: 20px;
 }
 .searchLink {
