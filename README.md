@@ -24,19 +24,19 @@ Charles Ohanyere
 
 ## User Story
 
-User Story: As a user, I want to calculate my BMI and search the type of workout I want to do so that I can find the best workout for me.
-As a user, I want to browse through the workout options and select the one that best suits my needs.
-As a user, I want to follow the instructions or watch the video to complete the workout.
+- As a user, I want to calculate my BMI and search the type of workout I want to do so that I can find the best workout for me.
+- As a user, I want to browse through the workout options and select the one that best suits my needs.
+- As a user, I want to follow the instructions or watch the video to complete the workout.
 
 ## Acceptance Criteria:
 
-The app should have clear and concise guide for BMI calculation.
-The app should have clear and concise options for the type of workout after clicking on the part of my body that I want to work on.
-The user should be able to easily select their preferred options and move on to the next step.
-The app should provide a clear and concise list of workout options based on the user's BMI, workout type, and muscles.
-The user should be able to easily browse through the workout options and view details such as workout length, difficulty level, and target areas.
-The app should provide clear and concise instructions or a video demonstration for each workout.
-The user should be able to select the workout they want and move on to the next step.
+- The app should have clear and concise guide for BMI calculation.
+- The app should have clear and concise options for the type of workout after clicking on the part of my body that I want to work on.
+- The user should be able to easily select their preferred options and move on to the next step.
+- The app should provide a clear and concise list of workout options based on the user's BMI, workout type, and muscles.
+- The user should be able to easily browse through the workout options and view details such as workout length, difficulty level, and target areas.
+- The app should provide clear and concise instructions or a video demonstration for each workout.
+- The user should be able to select the workout they want and move on to the next step.
 
 ## How to use FitPlan
 
