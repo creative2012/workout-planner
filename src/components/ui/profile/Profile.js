@@ -1,14 +1,15 @@
-import * as React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import Logout from '@mui/icons-material/Logout';
-import { useNavigate } from "react-router-dom";
 
 function Profile(props) {
+  //useNavigate to redirect back to login page
   const navigate = useNavigate();
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -21,20 +22,20 @@ function Profile(props) {
     localStorage.clear();
     navigate("/");
     window.location.reload(false);
-};
+  };
 
   return (
     <div>
-          <Avatar className="userImage"
-            onClick={handleClick}
-            size="small"
-            sx={{ ml: 2 }}
-            aria-controls={open ? 'account-menu' : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
-          >
-            {props.name}
-          </Avatar>
+      <Avatar className="userImage"
+        onClick={handleClick}
+        size="small"
+        sx={{ ml: 2 }}
+        aria-controls={open ? 'account-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+      >
+        {props.name}
+      </Avatar>
       <Menu
         anchorEl={anchorEl}
         open={open}
@@ -80,7 +81,5 @@ function Profile(props) {
     </div>
   );
 }
-
-
 
 export default Profile
