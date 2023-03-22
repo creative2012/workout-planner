@@ -17,9 +17,9 @@ FitPlan is more than just an exercise app. It's a community of like-minded indiv
 
 ## Designers
 
-Paul Morris
-Onanike Obinna
-Khyle FLores
+Paul Morris,
+Onanike Obinna,
+Khyle FLores and
 Charles Ohanyere
 
 ## User Story
