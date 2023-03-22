@@ -100,10 +100,10 @@ const Bmi = (props) => {
                             inputRef={age}
                             required={true}
                             autoFocus
+                            label={'Age: '+userData.age}
                             className="loginTextFields"
                             margin="dense"
                             id="age"
-                            label="Age"
                             type="number"
                             variant="outlined"
                             sx={{
@@ -118,10 +118,10 @@ const Bmi = (props) => {
                             inputRef={height}
                             required={true}
                             autoFocus
+                            label={'Weight: ' +userData.height}
                             className="loginTextFields"
                             margin="dense"
                             id="height"
-                            label="Height"
                             type="number"
                             variant="outlined"
                             sx={{
@@ -139,10 +139,10 @@ const Bmi = (props) => {
                             inputRef={weight}
                             required={true}
                             autoFocus
+                            label={'Height: ' +userData.weight}
                             className="loginTextFields"
                             margin="dense"
                             id="weight"
-                            label="Weight"
                             type="number"
                             variant="outlined"
                             sx={{
